@@ -8,18 +8,24 @@ import {
   InputAdornment,
   Link,
   Badge,
+  IconButton,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
 } from "@mui/material";
 import logo from "../assets/images/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
 import { useCart } from "../store/cartContext";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
-
 import "../styles/navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
+  const [drawerOpen, setDrawerOpen] = useState(false);
 
   // Access cart and user details from context
   const { getTotalQuantity, user, logoutUser } = useCart();
@@ -27,28 +33,30 @@ const Navbar = () => {
   const handleSearch = (event) => {
     if (event.key === "Enter" && searchQuery.trim()) {
       navigate(`/category/all/search/${encodeURIComponent(searchQuery)}`);
-      setSearchQuery(""); // Clear the search bar
+      setSearchQuery("");
     }
   };
 
   const handleLogin = () => {
-    // Navigate to the login screen
     navigate("/login");
   };
 
   const handleLogout = () => {
-    // Clear user data and navigate back to the home screen
     logoutUser();
     navigate("/");
   };
 
   const handleCartClick = () => {
-    navigate("/cart"); // Redirect to the cart page
+    navigate("/cart");
+  };
+
+  const toggleDrawer = (open) => {
+    setDrawerOpen(open);
   };
 
   return (
     <AppBar position="static" color="primary">
-      <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
+      <Toolbar className="navbar-toolbar">
         {/* Logo */}
         <Link
           onClick={() => navigate("/")}
@@ -56,8 +64,19 @@ const Navbar = () => {
           underline="hover"
           style={{ cursor: "pointer" }}
         >
-          <img src={logo} alt="Logo" style={{ height: 80 }} />
+          <img src={logo} alt="Logo" className="navbar-logo" />
         </Link>
+
+        {/* Mobile Hamburger Menu */}
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          onClick={() => toggleDrawer(true)}
+          sx={{ display: { xs: "block", sm: "none" } }} // Show on mobile only
+        >
+          <MenuIcon />
+        </IconButton>
 
         {/* Search Bar */}
         <TextField
@@ -75,10 +94,22 @@ const Navbar = () => {
               </InputAdornment>
             ),
           }}
+          sx={{
+            display: { xs: "none", sm: "block" }, // Hide search on mobile
+            marginLeft: "16px",
+            width: { sm: "400px", xs: "100px" }, // Adjust width for mobile
+          }}
         />
 
-        {/* Navigation Buttons and User Info */}
-        <div style={{ display: "flex", alignItems: "center" }}>
+        {/* For desktop: Buttons should be hidden on mobile */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            display: { xs: "none", sm: "flex" }, // Hide for mobile
+          }}
+          className="navbar-buttons"
+        >
           <Button color="inherit" onClick={() => navigate("/")}>
             Home
           </Button>
@@ -86,7 +117,6 @@ const Navbar = () => {
             Products
           </Button>
 
-          {/* Login/Logout Buttons */}
           {!user ? (
             <Button
               color="inherit"
@@ -117,7 +147,6 @@ const Navbar = () => {
               </Button>
             </>
           )}
-          {/* Cart Icon */}
           <div className="navbar-cart-link" onClick={handleCartClick}>
             <Badge
               badgeContent={getTotalQuantity()}
@@ -127,21 +156,45 @@ const Navbar = () => {
                 vertical: "top",
                 horizontal: "right",
               }}
-              sx={{
-                "& .MuiBadge-dot": {
-                  backgroundColor: "#ff6347", // Tomato color for the dot
-                },
-                "& .MuiBadge-colorError": {
-                  backgroundColor: "#ff6347 !important", // Tomato color for the badge
-                  color: "#ffffff", // White text
-                },
-              }}
             >
               <ShoppingCartIcon fontSize="large" sx={{ color: "white" }} />
             </Badge>
           </div>
         </div>
       </Toolbar>
+
+      {/* Drawer for Mobile */}
+      <Drawer
+        anchor="right"
+        open={drawerOpen}
+        onClose={() => toggleDrawer(false)}
+        sx={{
+          display: { xs: "block", sm: "none" }, // Show only on mobile view
+        }}
+      >
+        <List>
+          <ListItem button onClick={() => navigate("/")}>
+            <ListItemText primary="Home" />
+          </ListItem>
+          <ListItem button onClick={() => navigate("/products")}>
+            <ListItemText primary="Products" />
+          </ListItem>
+          {!user ? (
+            <ListItem button onClick={handleLogin}>
+              <ListItemText primary="Login" />
+            </ListItem>
+          ) : (
+            <>
+              <ListItem button onClick={handleLogout}>
+                <ListItemText primary="Logout" />
+              </ListItem>
+            </>
+          )}
+          <ListItem button onClick={handleCartClick}>
+            <ListItemText primary="Cart" />
+          </ListItem>
+        </List>
+      </Drawer>
     </AppBar>
   );
 };

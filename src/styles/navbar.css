@@ -4,7 +4,7 @@
   width: 100%; /* Full width */
   margin: 0;
   padding: 0;
-  box-shadow: none;;
+  box-shadow: none;
 }
 
 .navbar-toolbar {
@@ -16,23 +16,35 @@
 
 /* Logo Styling */
 .navbar-logo {
-  height: 70px; /* Increased logo size */
-  width: auto; /* Maintain aspect ratio */
+  height: 70px !important; /* Increased logo size */
+  width: auto !important; /* Maintain aspect ratio */
 }
 
 /* Centered Search Bar */
-.search-form {
-  flex-grow: 1; /* Push buttons to the right */
-  display: flex;
-  justify-content: center; /* Center the search bar */
+.navbar-search {
+  margin-left: 10px !important;
+  background-color: white !important;
+  border-radius: 5px !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-.navbar-search {
-  margin-left: 10px;
-  background-color: white !important;
-  border-radius: 5px;
-  padding-right: 10px;
-  width: 400px; /* You can adjust the width as per your design */
+.navbar-search .MuiInputAdornment-root {
+  display: flex !important;
+}
+
+.css-du16qe-MuiInputBase-root-MuiOutlinedInput-root{
+  width: 100%;
+}
+
+.navbar-search{
+  width: 100%;
+  padding-left: 0px;
+  margin-left: 0px !important;
+}
+
+.navbar-search .MuiInputAdornment-root {
+  font-size: 20px !important;
 }
 
 /* Right-Aligned Buttons */
@@ -42,23 +54,38 @@
 }
 
 .navbar-button {
-  color: white !important; /* Button text color */
-  font-weight: bold; /* Bold text */
-  text-transform: none; /* Keep natural casing */
+  color: white !important;
+  font-weight: bold !important;
+  text-transform: none !important; /* Keep natural casing */
 }
 
-/* Responsive Design */
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 1024px) {
+  .navbar-search {
+    width: 200px !important; /* Smaller search bar on tablets */
+  }
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
   .navbar-logo {
-    height: 50px; /* Smaller logo */
+    height: 50px !important; /* Smaller logo */
   }
 
   .navbar-search {
-    width: 200px; /* Smaller search bar */
+    width: 180px !important; /* Smaller search bar */
   }
 
-  .navbar-button {
-    font-size: 14px; /* Smaller button text */
-    color: white !important;
+  .navbar-buttons {
+    display: none !important; /* Hide the navigation buttons on mobile */
+  }
+
+  /* Adjusting drawer menu */
+  .MuiDrawer-paper {
+    width: 240px !important; /* Width of the mobile drawer */
+  }
+
+  .MuiButton-root {
+    font-size: 14px !important; /* Smaller font size for buttons */
   }
 }
