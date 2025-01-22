@@ -97,7 +97,7 @@ const Navbar = () => {
           sx={{
             display: { xs: "none", sm: "block" }, // Hide search on mobile
             marginLeft: "16px",
-            width: { sm: "400px", xs: "100px" }, // Adjust width for mobile
+            width: { sm: "225px", xs: "100px" }, // Adjust width for mobile
           }}
         />
 
