@@ -1,8 +1,10 @@
+/* Reset body and html styles */
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
+  box-sizing: border-box; /* Ensure consistent box-sizing */
 }
 
 #root {
@@ -11,11 +13,19 @@ body {
   min-height: 100%; /* Ensures full height usage */
 }
 
-
+/* This makes sure that the content takes up the available space */
 .app-content {
-  flex: 1; /* This makes the content expand to take up remaining space */
+  flex: 1;
 }
 
+/* Footer Styles */
 footer {
   margin-top: auto; /* Push the footer to the bottom */
+}
+
+@media (max-width: 768px) {
+  /* Mobile-specific styling */
+  .app-content {
+    padding: 20px; /* Add padding to the content for small screens */
+  }
 }

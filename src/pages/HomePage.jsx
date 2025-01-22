@@ -1,5 +1,5 @@
 import React from "react";
-import Section from "../components/Section"; // Import the renamed component
+import Section from "../components/Section";
 import Carousel from "../components/Carousel";
 import "../styles/home.css";
 import { Box, Typography } from "@mui/material";
@@ -19,34 +19,17 @@ const HomePage = () => {
   ];
 
   return (
-    <div>
+    <div className="homepage">
       <MidCarousel />
-      <div>
-        <Section title="" items={items} />
-      </div>
 
       <Box className="home-container">
         <Carousel />
+      </Box>
+
+      {/* Added margin-top for spacing between carousel and section */}
+      <Box className="home-container" mt={4}>
         <Section
           title="Popular Products"
-          items={items}
-          itemImagePath="assets/images"
-        />
-        <br></br>
-        <Section
-          title="Corporate Gifts"
-          items={items}
-          itemImagePath="assets/images"
-        />
-        <br></br>
-        <Section
-          title="Packaging Products"
-          items={items}
-          itemImagePath="assets/images"
-        />
-        <br></br>
-        <Section
-          title="Photo Gifts"
           items={items}
           itemImagePath="assets/images"
         />

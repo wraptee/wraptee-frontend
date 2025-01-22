@@ -1,16 +1,75 @@
+/* Reset body and html styles to avoid overflow */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll on all pages */
+}
+
 .homepage {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Full viewport height */
+  width: 100%; /* Ensure the homepage takes full width */
 }
 
-.content {
-  flex: 1; /* Allow the content to grow and take up available space */
+.home-container {
+  width: 100%;
+  padding: 0 20px; /* Padding for spacing */
 }
 
+/* Fix potential issues with the extra spacing on the right side */
+* {
+  box-sizing: border-box; /* Ensures that padding and border don't cause overflow */
+}
+
+/* Footer styles */
 footer {
   background-color: #ff6347; /* Your theme color */
   color: white;
   text-align: center;
   padding: 20px;
+  margin-top: 20px;
+}
+
+/* Responsive styling for different devices */
+@media (max-width: 1200px) {
+  .home-container {
+    padding: 0 10px; /* Slightly reduced padding for medium screens */
+  }
+
+  footer {
+    padding: 10px; /* Adjust footer padding for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 0 5px; /* Reduced padding for mobile screens */
+  }
+
+  footer {
+    padding: 10px; /* Adjust footer padding for mobile screens */
+  }
+
+  .content {
+    padding: 10px; /* Less padding on small screens */
+  }
+}
+
+/* Slick carousel fix */
+.slick-slide {
+  overflow: hidden; /* Prevents horizontal overflow caused by slick carousel */
+}
+
+/* Optional: Adjust margins and paddings for carousel and sections */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 0 5px; /* Smaller padding for small mobile screens */
+  }
+
+  .content {
+    padding: 10px; /* Less padding on small screens */
+  }
 }

@@ -18,3 +18,10 @@
   padding: 1rem;
   position: relative;
 }
+
+/* Mobile-specific footer adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px; /* Less padding on smaller screens */
+  }
+}

@@ -24,10 +24,7 @@ const App = () => (
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/" element={<HomePage />} />
-            <Route
-              path="/category/all/search/:searchQuery"
-              element={<CategoryPage />}
-            />
+            <Route path="/category/all/search/:searchQuery" element={<CategoryPage />} />
             <Route path="/category/:categoryName" element={<CategoryPage />} />
             <Route path="/product/:sku" element={<ProductDetailPage />} />
             <Route path="/about-us" element={<AboutUs />} />

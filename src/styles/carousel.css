@@ -1,12 +1,13 @@
 /* carousel.css */
 .carousel-container {
   width: 100%; /* Full width */
-  height: 50vh; /* Adjust based on your preference, here 60% of the screen height */
+  height: 50vh; /* Adjust height to fit viewport, reduced for better mobile experience */
   position: relative;
+  margin-bottom: 20px; /* Adds space below the carousel */
 }
 
 .carousel-slide {
-  padding: 20px;
+  padding: 10px;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -16,9 +17,6 @@
   align-items: center;
   cursor: pointer;
   margin-bottom: 10px;
-  height: auto;
-  margin-left: 4px;
-  margin-right: 4px;
 }
 
 .carousel-slide img {
@@ -28,15 +26,21 @@
   object-fit: cover;
 }
 
+/* Title Style */
 .carousel-title {
   text-align: center;
   color: #FF6347; /* Customize the title color */
   margin-top: 20px;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Make carousel responsive for mobile devices */
 @media (max-width: 768px) {
   .carousel-container {
-    height: 50vh; /* Adjust height on smaller screens */
+    height: 45vh; /* Adjust height on smaller screens to save space */
+  }
+
+  .carousel-slide img {
+    max-height: 200px; /* Limit image height to fit mobile screens */
+    object-fit: cover; /* Maintain aspect ratio */
   }
 }

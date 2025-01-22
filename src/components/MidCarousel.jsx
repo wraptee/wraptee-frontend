@@ -9,14 +9,14 @@ import banner2 from "../assets/images/section/sliderBanner/banner2.webp";
 
 const MidCarousel = () => {
   const settings = {
-    dots: true, // Enable navigation dots
-    infinite: true, // Infinite loop
-    speed: 500, // Transition speed
-    slidesToShow: 1, // Show one slide at a time
-    slidesToScroll: 1, // Scroll one slide at a time
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 3000, // Time per slide
-    arrows: false, // Hide navigation arrows
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
   };
 
   const slides = [
@@ -43,23 +43,23 @@ const MidCarousel = () => {
   return (
     <Box
       sx={{
-        width: "100%", // Full width
-        height: "60vh", // 50% of the viewport height
+        width: "100%",
+        height: { xs: "40vh", sm: "50vh", md: "60vh" }, // Responsive height
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "#f8f8f8",
-        overflow: "hidden", // Prevent overflow
+        overflow: "hidden",
       }}
     >
-      <Slider {...settings} style={{ width: "90%", marginLeft: 0 }}>
+      <Slider {...settings} style={{ width: "100%" }}>
         {slides.map((slide) => (
           <Box
             key={slide.id}
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: "space-between",
+              justifyContent: "center",
               borderRadius: "8px",
               overflow: "hidden",
               boxShadow: "0 4px 8px rgba(0,0,0,0.1)",
@@ -67,10 +67,12 @@ const MidCarousel = () => {
           >
             <Box
               sx={{
-                flex: 1,
+                width: "100%",
+                height: "100%",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
+                padding: 0, // Remove padding
               }}
             >
               <img
@@ -78,9 +80,9 @@ const MidCarousel = () => {
                 alt={slide.title}
                 style={{
                   width: "100%",
-                  height: "auto",
+                  height: "100%",
                   borderRadius: "8px",
-                  objectFit: "cover",
+                  objectFit: "cover", // Ensure it fills the container without stretching
                 }}
               />
             </Box>
