@@ -25,15 +25,19 @@ const Footer = () => {
         sx={{
           backgroundColor: "#000000", // Theme primary color (black)
           color: "white",
+          padding: "20px 10px", // Padding for better spacing
         }}
       >
         <Grid
           container
           spacing={4}
-          sx={{ maxWidth: "1200px", margin: "0 auto" }}
+          sx={{
+            maxWidth: "1200px",
+            padding: "0 10px", // Padding for mobile view
+          }}
         >
           {/* About Section */}
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <Typography variant="h6" gutterBottom>
               About Us
             </Typography>
@@ -45,7 +49,7 @@ const Footer = () => {
           </Grid>
 
           {/* Links Section */}
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <Typography variant="h6" gutterBottom>
               Quick Links
             </Typography>
@@ -76,7 +80,7 @@ const Footer = () => {
           </Grid>
 
           {/* Policies Section */}
-          <Grid item xs={12} sm={4} sx={{ position: "relative" }}>
+          <Grid item xs={12} sm={6} md={4}>
             <Typography variant="h6" gutterBottom>
               Policies
             </Typography>
@@ -117,31 +121,28 @@ const Footer = () => {
                 Support Policy
               </Link>
             </Box>
-
-            {/* Scroll to Top Button next to Policies Section */}
+            {/* Scroll to Top Button */}
             <Box
-              onClick={scrollToTop} // Scroll to top on click
+              onClick={scrollToTop}
               sx={{
-                position: "absolute", // Position the button inside footer container
-                top: "50%", // Center the button vertically in the Policies section
-                right: -50, // Place the button to the right of the Policies section
-                backgroundColor: "white", // White background for the button
-                borderRadius: "50%", // Round button
-                padding: 1.5,
+                marginTop: "10px",
+                backgroundColor: "white",
+                borderRadius: "50%",
+                padding: "8px",
                 cursor: "pointer",
-                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Slight shadow for visibility
+                display: "inline-block",
+                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
                 "&:hover": {
-                  backgroundColor: "#f1f1f1", // Hover effect
+                  backgroundColor: "#f1f1f1",
                 },
               }}
             >
-              <ArrowUpwardIcon sx={{ color: "#000000" }} />{" "}
-              {/* Upward arrow icon in black */}
+              <ArrowUpwardIcon sx={{ color: "#000000" }} />
             </Box>
           </Grid>
 
           {/* Contact Section */}
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12} sm={6} md={4}>
             <Typography variant="h6" gutterBottom>
               Contact Us
             </Typography>
