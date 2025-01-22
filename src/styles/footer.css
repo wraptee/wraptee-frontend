@@ -1,0 +1,26 @@
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* Main Layout CSS */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the container always fills the viewport */
+}
+
+.main-content {
+  flex: 1; /* Allows the content to take up all available space */
+}
+
+.fixed-footer {
+  color: white; /* Footer text color */
+  text-align: center;
+  font-size: 14px;
+}

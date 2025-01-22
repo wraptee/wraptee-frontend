@@ -1,0 +1,129 @@
+/* Product Detail Page Styles */
+.product-detail-container {
+  padding: 40px;
+  background-color: #f5f5f5; /* Light background for the container */
+}
+
+.product-detail-grid {
+  display: flex;
+  flex-direction: row; /* Ensure image and details are in a row */
+}
+
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1; /* Allow image container to take available space */
+}
+
+.product-image-card {
+  width: 100%;
+  max-width: 400px; /* Fixed width for image card */
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow to make it stand out */
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Ensures image doesn't stretch and maintains aspect ratio */
+}
+
+.product-details-container {
+  display: flex;
+  flex-direction: column; /* Stack details vertically inside container */
+  gap: 20px; /* Space between product details */
+  flex: 2; /* Allow details container to take more space */
+}
+
+.product-name {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ff6347; /* Highlighted price color */
+}
+
+.product-description {
+  font-size: 1.1rem;
+  color: #666; /* Light color for the description */
+}
+
+.add-to-cart-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #ff6347; /* Custom background for the button */
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.add-to-cart-button:hover {
+  background-color: #ff6347; /* Darker shade for hover effect */
+}
+
+.related-products {
+  margin-top: 40px;
+  padding-top: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.related-product-card {
+  box-shadow: none;
+  cursor: pointer;
+  border-radius: 8px; /* Rounded corners for related product cards */
+  transition: transform 0.3s ease; /* Smooth scale effect */
+}
+
+.related-product-card:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.related-product-image {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover; /* Ensures the image fills the space without stretching */
+}
+
+.related-product-card .MuiCardContent-root {
+  padding: 10px;
+}
+
+.related-product-card .MuiTypography-root {
+  margin-bottom: 5px;
+}
+
+.related-product-price {
+  font-weight: 600;
+  color: #ff6347; /* Highlight price in related products */
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+  .product-detail-grid {
+    flex-direction: row; /* Stack image and details vertically on smaller screens */
+    gap: 20px;
+  }
+
+  .product-image-card {
+    max-width: 300px; /* Slightly smaller image card on mobile */
+  }
+
+  .product-details-container {
+    gap: 15px;
+  }
+}

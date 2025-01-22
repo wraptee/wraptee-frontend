@@ -1,0 +1,64 @@
+/* Navbar Styles */
+.navbar {
+  background-color: #000000; /* Black background */
+  width: 100%; /* Full width */
+  margin: 0;
+  padding: 0;
+  box-shadow: none;;
+}
+
+.navbar-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+/* Logo Styling */
+.navbar-logo {
+  height: 70px; /* Increased logo size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Centered Search Bar */
+.search-form {
+  flex-grow: 1; /* Push buttons to the right */
+  display: flex;
+  justify-content: center; /* Center the search bar */
+}
+
+.navbar-search {
+  margin-left: 10px;
+  background-color: white !important;
+  border-radius: 5px;
+  padding-right: 10px;
+  width: 400px; /* You can adjust the width as per your design */
+}
+
+/* Right-Aligned Buttons */
+.navbar-buttons {
+  display: flex;
+  gap: 16px; /* Space between buttons */
+}
+
+.navbar-button {
+  color: white !important; /* Button text color */
+  font-weight: bold; /* Bold text */
+  text-transform: none; /* Keep natural casing */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .navbar-logo {
+    height: 50px; /* Smaller logo */
+  }
+
+  .navbar-search {
+    width: 200px; /* Smaller search bar */
+  }
+
+  .navbar-button {
+    font-size: 14px; /* Smaller button text */
+    color: white !important;
+  }
+}

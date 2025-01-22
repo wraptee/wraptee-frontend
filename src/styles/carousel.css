@@ -1,0 +1,42 @@
+/* carousel.css */
+.carousel-container {
+  width: 100%; /* Full width */
+  height: 50vh; /* Adjust based on your preference, here 60% of the screen height */
+  position: relative;
+}
+
+.carousel-slide {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 10px;
+  height: auto;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.carousel-title {
+  text-align: center;
+  color: #FF6347; /* Customize the title color */
+  margin-top: 20px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .carousel-container {
+    height: 50vh; /* Adjust height on smaller screens */
+  }
+}

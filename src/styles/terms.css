@@ -1,0 +1,23 @@
+ul {
+  list-style-type: none; /* Removes default bullet points */
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
+li {
+  color: #ff6347; /* Text color */
+  font-size: 16px; /* Adjust font size */
+  margin-bottom: 5px; /* Add spacing between items */
+}
+
+li::before {
+  content: "• "; /* Add a bullet point manually */
+  color: #ff6347;
+}
+
+.title{
+  color: #ff6347;
+  margin-top: 2px;
+  font-weight: 600;
+}

@@ -1,0 +1,21 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Ensures full height usage */
+}
+
+
+.app-content {
+  flex: 1; /* This makes the content expand to take up remaining space */
+}
+
+footer {
+  margin-top: auto; /* Push the footer to the bottom */
+}

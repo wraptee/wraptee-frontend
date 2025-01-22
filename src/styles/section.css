@@ -1,0 +1,35 @@
+.section {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background to highlight the section */
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.section-title {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: #ff6347; /* Match theme color */
+}
+
+.section-card {
+  border-radius: 12px; /* Smooth rounded corners */
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure consistent height */
+}
+
+.section-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image fits the container proportionally */
+}
+
+.section-name {
+  color: #333; /* Dark text for better readability */
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}

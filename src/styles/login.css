@@ -1,0 +1,30 @@
+.login-paper {
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+.login-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-title {
+  color: #ff6347;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.login-button {
+  margin-top: 1.5rem;
+  background-color: #ff6347;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #e55347;
+}
