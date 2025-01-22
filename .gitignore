@@ -32,7 +32,6 @@ out/
 
 # Gatsby specific
 .cache/
-public/
 
 # Nuxt.js specific
 .nuxt/
