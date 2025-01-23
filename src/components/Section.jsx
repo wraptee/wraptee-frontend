@@ -42,19 +42,25 @@ const Section = ({ title, items }) => {
               }}
             >
               <Box
+                className="section-card-image-container"
                 sx={{
-                  height: 200, // Fixed height for image container
+                  aspectRatio: "4/3", // Ensures consistent card image aspect ratio
                   width: "100%",
                   overflow: "hidden",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: "#f5f5f5", // Fallback background
                 }}
               >
                 <img
                   src={item.image}
                   alt={item.name}
+                  className="section-card-image"
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover", // Maintains aspect ratio and fills the container
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                    objectFit: "contain", // Ensures the full image is visible
                   }}
                 />
               </Box>
@@ -62,7 +68,7 @@ const Section = ({ title, items }) => {
                 sx={{
                   textAlign: "center",
                   padding: 2,
-                  flexGrow: 1, // Makes the card content fill the remaining space
+                  flexGrow: 1, // Ensures card content grows to fill available space
                 }}
               >
                 <Typography
