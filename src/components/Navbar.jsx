@@ -67,17 +67,6 @@ const Navbar = () => {
           <img src={logo} alt="Logo" className="navbar-logo" />
         </Link>
 
-        {/* Mobile Hamburger Menu */}
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          onClick={() => toggleDrawer(true)}
-          sx={{ display: { xs: "block", sm: "none" } }} // Show on mobile only
-        >
-          <MenuIcon />
-        </IconButton>
-
         {/* Search Bar */}
         <TextField
           value={searchQuery}
@@ -100,6 +89,17 @@ const Navbar = () => {
             width: { sm: "225px", xs: "100px" }, // Adjust width for mobile
           }}
         />
+
+        {/* Mobile Hamburger Menu */}
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="menu"
+          onClick={() => toggleDrawer(true)}
+          sx={{ display: { xs: "block", sm: "none" } }} // Show on mobile only
+        >
+          <MenuIcon />
+        </IconButton>
 
         {/* For desktop: Buttons should be hidden on mobile */}
         <div

@@ -45,7 +45,7 @@ const MidCarousel = () => {
     <Box
       sx={{
         width: "100%",
-        height: { xs: "40vh", sm: "50vh", md: "60vh" }, // Responsive height
+        height: { xs: "20vh", sm: "50vh", md: "60vh" }, // Responsive height
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
