@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Typography, Grid, Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward"; // Import the Up arrow icon
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import "../styles/footer.css";
 
 const Footer = () => {
   const navigate = useNavigate();
+  const [showScroll, setShowScroll] = useState(false);
 
   const navigateTo = (path) => {
     navigate(path);
@@ -15,17 +16,42 @@ const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // Smooth scrolling effect
+      behavior: "smooth",
     });
   };
+
+  // Function to toggle the visibility of the scroll-to-top button
+  const handleScroll = () => {
+    const scrollY =
+      window.scrollY ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop;
+
+    console.log("ScrollY:", scrollY); // Debugging
+    if (scrollY > 300) {
+      setShowScroll(true); // Show button
+    } else {
+      setShowScroll(false); // Hide button
+    }
+  };
+
+  useEffect(() => {
+    console.log("Adding scroll listener"); // Debugging
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      console.log("Removing scroll listener"); // Debugging
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <div className="fixed-footer">
       <Box
         sx={{
-          backgroundColor: "#000000", // Theme primary color (black)
+          backgroundColor: "#000000",
           color: "white",
-          padding: "20px 10px", // Padding for better spacing
+          padding: "20px 10px",
         }}
       >
         <Grid
@@ -33,7 +59,8 @@ const Footer = () => {
           spacing={4}
           sx={{
             maxWidth: "1200px",
-            padding: "0 10px", // Padding for mobile view
+            padding: "0 10px",
+            margin: "0 auto",
           }}
         >
           {/* About Section */}
@@ -121,24 +148,6 @@ const Footer = () => {
                 Support Policy
               </Link>
             </Box>
-            {/* Scroll to Top Button */}
-            <Box
-              onClick={scrollToTop}
-              sx={{
-                marginTop: "10px",
-                backgroundColor: "white",
-                borderRadius: "50%",
-                padding: "8px",
-                cursor: "pointer",
-                display: "inline-block",
-                boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
-                "&:hover": {
-                  backgroundColor: "#f1f1f1",
-                },
-              }}
-            >
-              <ArrowUpwardIcon sx={{ color: "#000000" }} />
-            </Box>
           </Grid>
 
           {/* Contact Section */}
@@ -168,6 +177,13 @@ const Footer = () => {
           </Typography>
         </Box>
       </Box>
+
+      {/* Scroll to Top Button */}
+      {showScroll && (
+        <div className="scroll-to-top" onClick={scrollToTop}>
+          <ArrowUpwardIcon />
+        </div>
+      )}
     </div>
   );
 };

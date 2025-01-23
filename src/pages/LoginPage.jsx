@@ -106,7 +106,7 @@ const LoginPage = () => {
       flexDirection="column"
       alignItems="center"
       marginTop={5}
-      sx={{ width: "100%", maxWidth: 400, marginX: "auto" }} // Apply custom width for better layout
+      sx={{ width: "100%", maxWidth: 400, marginX: "auto", mb: 8 }} // Apply custom width for better layout
     >
       <Typography color="optional" variant="h4" mb={4}>
         Welcome to WrapTee !!

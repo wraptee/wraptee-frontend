@@ -12,6 +12,16 @@ const ImageLinks = {
   sippers: require('../assets/images/category/sippers.jpg'),
   tshirts: require('../assets/images/category/tshirt.jpg'),
 
+  /* Banner */
+
+  bannerShirt: require('../assets/images/banner/bannerShirt.jpg'),
+  corporateGift: require('../assets/images/banner/corporateGitft.jpg'),
+  customBrand: require('../assets/images/banner/customBrand.jpg'),
+
+  /* Logo */
+
+  logo: require('../assets/images/logo.png'),
+
   apparel: require('../assets/images/section/cateroryBanner/apparel.webp'),
   business: require('../assets/images/section/cateroryBanner/business.webp'),
   corporate: require('../assets/images/section/cateroryBanner/corporate.webp'),

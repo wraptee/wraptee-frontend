@@ -147,19 +147,21 @@ const Navbar = () => {
               </Button>
             </>
           )}
-          <div className="navbar-cart-link" onClick={handleCartClick}>
-            <Badge
-              badgeContent={getTotalQuantity()}
-              color="error"
-              overlap="circular"
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-            >
-              <ShoppingCartIcon fontSize="large" sx={{ color: "white" }} />
-            </Badge>
-          </div>
+          {user && (
+            <div className="navbar-cart-link" onClick={handleCartClick}>
+              <Badge
+                badgeContent={getTotalQuantity()}
+                color="error"
+                overlap="circular"
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+              >
+                <ShoppingCartIcon fontSize="large" sx={{ color: "white" }} />
+              </Badge>
+            </div>
+          )}
         </div>
       </Toolbar>
 

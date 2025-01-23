@@ -1,41 +1,42 @@
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #ffffff;
-}
-
-/* Main Layout CSS */
-.main-container {
+/* Scroll to Top Button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 40px; /* Ensures visibility above footer */
+  right: 20px;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensures the container always fills the viewport */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000; /* Keeps it above other elements */
 }
 
-.main-content {
-  flex: 1; /* Allows the content to take up all available space */
+.scroll-to-top:hover {
+  background-color: #f1f1f1; /* Light gray hover effect */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer Styling */
-.fixed-footer {
-  background-color: #000000;
-  color: white;
-  padding: 20px 10px;
-  text-align: center;
-  font-size: 14px;
+/* Hiding button when not visible */
+.scroll-to-top.hidden {
+  display: none;
 }
 
-
-/* Responsiveness for small screens */
+/* Footer Responsiveness */
 @media (max-width: 600px) {
+  .scroll-to-top {
+    width: 35px;
+    height: 35px;
+    bottom: 80px; /* Adjust position for mobile screens */
+    right: 15px;
+  }
+
   .fixed-footer {
     font-size: 12px;
   }
-  .css-vnkrmi-MuiGrid-root{
-    margin-right: 0px !important;
-  }
 }
-

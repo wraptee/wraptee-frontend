@@ -9,19 +9,35 @@ import {
   Snackbar,
   Alert,
   Link,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
 } from "@mui/material";
 import { useCart } from "../store/cartContext";
 import "../styles/cartPage.css";
 import { useNavigate } from "react-router-dom";
 import { HourglassEmpty } from "@mui/icons-material";
+import { sendOrderToBackend } from "../services/authService"; // Import the service
 
 const CartPage = () => {
-  const { cart, removeFromCart, updateQuantity, getTotalPrice } = useCart();
+  const {
+    cart,
+    removeFromCart,
+    updateQuantity,
+    getTotalPrice,
+    clearCart,
+    user,
+  } = useCart();
   const [snackbar, setSnackbar] = useState({
     open: false,
     message: "",
     severity: "success", // success, error, info, warning
   });
+  const [checkoutDialogOpen, setCheckoutDialogOpen] = useState(false);
+  const [checkoutLoading, setCheckoutLoading] = useState(false); // For loading state during checkout
+
+  const navigate = useNavigate();
 
   // Open Snackbar
   const handleOpenSnackbar = (message, severity = "success") => {
@@ -33,19 +49,37 @@ const CartPage = () => {
     setSnackbar({ ...snackbar, open: false });
   };
 
-  const handleRemove = (sku) => {
-    removeFromCart(sku);
-  };
+  // Handle checkout
+  const handleCheckout = async () => {
+    if (cart.length === 0) return;
 
-  const handleQuantityChange = (sku, quantity) => {
-    if (quantity > 0) {
-      updateQuantity(sku, quantity);
+    const payload = {
+      name: user?.name || "Guest",
+      email: user?.email || "guest@example.com",
+      phoneNumber: user?.phoneNumber || "Not Provided",
+      cart,
+    };
+
+    setCheckoutLoading(true);
+
+    try {
+      const response = await sendOrderToBackend(payload);
+
+      if (response.success) {
+        clearCart(); // Clear the cart after successful checkout
+        setCheckoutDialogOpen(true); // Open success dialog
+      } else {
+        handleOpenSnackbar(
+          response.message || "Failed to place the order",
+          "error"
+        );
+      }
+    } catch (error) {
+      console.error("Checkout Error:", error);
+      handleOpenSnackbar("Something went wrong. Please try again.", "error");
+    } finally {
+      setCheckoutLoading(false);
     }
-  };
-  const navigate = useNavigate();
-
-  const navigateTo = (path) => {
-    navigate(path);
   };
 
   return (
@@ -57,7 +91,7 @@ const CartPage = () => {
           textAlign="center"
           marginBottom={4}
         >
-          Your Cart
+          {`Hello ${user?.name} here is your Cart 😊`}
         </Typography>
       ) : (
         ""
@@ -75,11 +109,11 @@ const CartPage = () => {
             className="link-to-home"
           >
             <Link
-              onClick={() => navigateTo("/")}
+              onClick={() => navigate("/")}
               color="inherit"
               style={{ cursor: "pointer" }}
             >
-              Your cart is empty click to do more shoppig !!.
+              Your cart is empty. Click here to do more shopping!
             </Link>
           </Typography>
         ) : (
@@ -124,10 +158,10 @@ const CartPage = () => {
                     <Button
                       onClick={() => {
                         handleOpenSnackbar(
-                          "Removed 1 quatity from the cart",
+                          "Removed 1 quantity from the cart",
                           "error"
                         );
-                        handleQuantityChange(product.sku, product.quantity - 1);
+                        updateQuantity(product.sku, product.quantity - 1);
                       }}
                       variant="outlined"
                     >
@@ -145,7 +179,7 @@ const CartPage = () => {
                     </span>
                     <Button
                       onClick={() => {
-                        handleQuantityChange(product.sku, product.quantity + 1);
+                        updateQuantity(product.sku, product.quantity + 1);
                         handleOpenSnackbar("Product added to cart", "success");
                       }}
                       variant="outlined"
@@ -158,7 +192,7 @@ const CartPage = () => {
                     variant="outlined"
                     color="optional"
                     onClick={() => {
-                      handleRemove(product.sku);
+                      removeFromCart(product.sku);
                       handleOpenSnackbar("Product removed from cart", "error");
                     }}
                     sx={{
@@ -184,12 +218,15 @@ const CartPage = () => {
           <Button
             variant="outlined"
             color="optional"
-            onClick={() => console.log("Proceed to Checkout")}
+            onClick={handleCheckout}
+            disabled={checkoutLoading}
           >
-            Proceed to Checkout
+            {checkoutLoading ? <HourglassEmpty /> : "Proceed to Checkout"}
           </Button>
         </Box>
       )}
+
+      {/* Snackbar for notifications */}
       <Snackbar
         open={snackbar.open}
         autoHideDuration={3000}
@@ -204,6 +241,31 @@ const CartPage = () => {
           {snackbar.message}
         </Alert>
       </Snackbar>
+
+      {/* Dialog for successful order placement */}
+      <Dialog
+        open={checkoutDialogOpen}
+        onClose={() => setCheckoutDialogOpen(false)}
+      >
+        <DialogTitle sx={{ color: "#FF6347" }}>Congratulations!</DialogTitle>
+        <DialogContent sx={{ color: "#FF6347" }}>
+          Your order has been placed. Our delivery team will contact you
+          shortly.
+        </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={() => {
+              setCheckoutDialogOpen(false);
+              navigate("/");
+            }}
+            variant="contained"
+            color="optional"
+            sx={{ color: "white" }}
+          >
+            Go to Home
+          </Button>
+        </DialogActions>
+      </Dialog>
     </Box>
   );
 };

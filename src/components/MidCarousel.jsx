@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import banner from "../assets/images/section/sliderBanner/banner.webp";
 import banner1 from "../assets/images/section/sliderBanner/banner1.webp";
 import banner2 from "../assets/images/section/sliderBanner/banner2.webp";
+import ImageLinks from "../utils/imageLink";
 
 const MidCarousel = () => {
   const settings = {
@@ -22,21 +23,21 @@ const MidCarousel = () => {
   const slides = [
     {
       id: 1,
-      title: "New Arrivals",
+      title: "Shirt",
       description: "Check out our latest products!",
-      image: banner,
+      image: ImageLinks.bannerShirt,
     },
     {
       id: 2,
-      title: "Hot Deals",
+      title: "Corporate Gifts",
       description: "Don't miss out on amazing discounts!",
-      image: banner1,
+      image: ImageLinks.corporateGift,
     },
     {
       id: 3,
-      title: "Trending Now",
+      title: "Custom Brand",
       description: "Discover the most popular items!",
-      image: banner2,
+      image: ImageLinks.customBrand,
     },
   ];
 

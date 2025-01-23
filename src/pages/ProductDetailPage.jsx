@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
   Grid,
@@ -7,15 +7,25 @@ import {
   Typography,
   Button,
   Box,
+  Snackbar,
+  Alert,
 } from "@mui/material";
 import productData from "../utils/product";
 import "../styles/productDetail.css";
 import { useCart } from "../store/cartContext";
 
 const ProductDetailPage = () => {
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: "",
+    severity: "success", // success, error, info, warning
+  });
   const { sku } = useParams();
   const navigate = useNavigate();
   const { addToCart } = useCart();
+
+  // Access cart and user details from context
+  const { getTotalQuantity, user, logoutUser } = useCart();
 
   // Find the product details based on the sku from the URL
   const product = productData.find((product) => product.sku === sku);
@@ -23,7 +33,23 @@ const ProductDetailPage = () => {
   if (!product) {
     return <Typography variant="h6">Product not found</Typography>;
   }
+  // Open Snackbar
+  const handleOpenSnackbar = (message, severity = "success") => {
+    setSnackbar({ open: true, message, severity });
+  };
 
+  // Close Snackbar
+  const handleCloseSnackbar = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
+  const onHandleCart = () => {
+    if (user) {
+      addToCart(product);
+    } else {
+      handleOpenSnackbar("Please Login First for Shopping", "success");
+      navigate("/login");
+    }
+  };
   return (
     <Box className="product-detail-container">
       <Grid container spacing={4} className="product-detail-grid">
@@ -65,7 +91,7 @@ const ProductDetailPage = () => {
             variant="contained"
             color="optional"
             className="add-to-cart-button"
-            onClick={() => addToCart(product)}
+            onClick={onHandleCart}
           >
             Add to Cart
           </Button>
@@ -131,6 +157,20 @@ const ProductDetailPage = () => {
             ))}
         </Grid>
       </Box>
+      <Snackbar
+        open={snackbar.open}
+        autoHideDuration={3000}
+        onClose={handleCloseSnackbar}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleCloseSnackbar}
+          severity={snackbar.severity}
+          sx={{ width: "100%" }}
+        >
+          {snackbar.message}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };
