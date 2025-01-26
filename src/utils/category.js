@@ -10,9 +10,9 @@ export const categories = [
     category: "tshirts",
   },
   {
-    name: "Cups",
+    name: "Cup",
     imageUrl: "/images/cups-category.jpg",
-    category: "cups",
+    category: "cup",
   },
   {
     name: "Photo Frames",

@@ -34,13 +34,18 @@ const CategoryPage = () => {
 
   return (
     <div className="category-container">
-      <Typography variant="h4" color="optional" mb={4}>
+      <Typography
+        variant="h4"
+        color="optional"
+        className="category-title"
+        mb={4}
+      >
         {searchQuery
           ? `Search Results for "${searchQuery}"`
           : `Category: ${categoryName}`}
       </Typography>
       {filteredProducts.length === 0 ? (
-        <Typography variant="h6" color="optional">
+        <Typography variant="h6" className="category-description">
           No products found.
         </Typography>
       ) : (
@@ -51,19 +56,21 @@ const CategoryPage = () => {
                 className="category-card"
                 onClick={() => navigate(`/product/${product.sku}`)}
               >
-                <img
-                  src={product.imageUrl}
-                  alt={product.name}
-                  className="category-image"
-                />
+                <div className="category-image-container">
+                  <img
+                    src={product.imageUrl}
+                    alt={product.name}
+                    className="category-image"
+                  />
+                </div>
                 <CardContent>
-                  <Typography variant="h6" fontWeight={600} color="optional">
+                  <Typography variant="h6" color="optional" fontWeight={600}>
                     {product.name}
                   </Typography>
-                  <Typography variant="body2" color="optional">
+                  <Typography color="optional" variant="body2">
                     {product.description}
                   </Typography>
-                  <Typography variant="body1" color="optional">
+                  <Typography color="optional" variant="body1">
                     ₹{product.price}
                   </Typography>
                 </CardContent>

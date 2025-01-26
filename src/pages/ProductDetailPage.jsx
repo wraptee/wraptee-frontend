@@ -22,10 +22,7 @@ const ProductDetailPage = () => {
   });
   const { sku } = useParams();
   const navigate = useNavigate();
-  const { addToCart } = useCart();
-
-  // Access cart and user details from context
-  const { getTotalQuantity, user, logoutUser } = useCart();
+  const { addToCart, user } = useCart();
 
   // Find the product details based on the sku from the URL
   const product = productData.find((product) => product.sku === sku);
@@ -33,6 +30,7 @@ const ProductDetailPage = () => {
   if (!product) {
     return <Typography variant="h6">Product not found</Typography>;
   }
+
   // Open Snackbar
   const handleOpenSnackbar = (message, severity = "success") => {
     setSnackbar({ open: true, message, severity });
@@ -42,14 +40,17 @@ const ProductDetailPage = () => {
   const handleCloseSnackbar = () => {
     setSnackbar({ ...snackbar, open: false });
   };
+
   const onHandleCart = () => {
     if (user) {
       addToCart(product);
+      handleOpenSnackbar("Product added to cart", "success");
     } else {
-      handleOpenSnackbar("Please Login First for Shopping", "success");
+      handleOpenSnackbar("Please login first for shopping", "error");
       navigate("/login");
     }
   };
+
   return (
     <Box className="product-detail-container">
       <Grid container spacing={4} className="product-detail-grid">
@@ -82,7 +83,7 @@ const ProductDetailPage = () => {
           </Typography>
           <Typography
             variant="body1"
-            color="#ff6347"
+            color="optional"
             className="product-description"
           >
             {product.description}
@@ -103,7 +104,7 @@ const ProductDetailPage = () => {
         <Typography
           variant="h4"
           color="optional"
-          textAlign={"center"}
+          textAlign="center"
           marginTop={4}
           mb={4}
           fontWeight={600}
@@ -118,36 +119,38 @@ const ProductDetailPage = () => {
                 relatedProduct.sku !== product.sku
             )
             .map((relatedProduct) => (
-              <Grid item xs={12} sm={4} md={3} key={relatedProduct.sku}>
+              <Grid item xs={12} sm={6} md={3} key={relatedProduct.sku}>
                 <Card
                   className="related-product-card"
                   onClick={() => navigate(`/product/${relatedProduct.sku}`)}
                 >
-                  <img
-                    src={relatedProduct.imageUrl}
-                    alt={relatedProduct.name}
-                    className="related-product-image"
-                  />
+                  <Box className="related-product-image-container">
+                    <img
+                      src={relatedProduct.imageUrl}
+                      alt={relatedProduct.name}
+                      className="related-product-image"
+                    />
+                  </Box>
                   <CardContent>
                     <Typography
                       color="#ff6347"
                       variant="h6"
                       fontWeight={600}
-                      textAlign={"center"}
+                      textAlign="center"
                     >
                       {relatedProduct.name}
                     </Typography>
                     <Typography
-                      color="#ff6347"
+                      color="optional"
                       variant="body2"
-                      textAlign={"center"}
+                      textAlign="center"
                     >
                       {relatedProduct.description}
                     </Typography>
                     <Typography
                       variant="body1"
                       color="optional"
-                      textAlign={"center"}
+                      textAlign="center"
                     >
                       ₹{relatedProduct.price}
                     </Typography>
