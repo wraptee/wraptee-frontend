@@ -21,6 +21,7 @@ const ImageLinks = {
   /* Logo */
 
   logo: require('../assets/images/logo.png'),
+  blackLogo: require('../assets/images/blackLogo.png'),
 
   apparel: require('../assets/images/section/cateroryBanner/apparel.webp'),
   business: require('../assets/images/section/cateroryBanner/business.webp'),
