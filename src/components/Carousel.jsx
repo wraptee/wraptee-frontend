@@ -5,6 +5,18 @@ import "../styles/carousel.css"; // Custom styles for carousel
 import productData from "../utils/product";
 import { useNavigate } from "react-router-dom";
 
+// Helper function to group products by category
+const groupByCategory = (products) => {
+  const grouped = {};
+  products.forEach((product) => {
+    if (!grouped[product.category]) {
+      grouped[product.category] = [];
+    }
+    grouped[product.category].push(product);
+  });
+  return grouped;
+};
+
 const Carousel = () => {
   const navigate = useNavigate();
 
@@ -34,6 +46,14 @@ const Carousel = () => {
     ],
   };
 
+  // Group products by category
+  const groupedProducts = groupByCategory(productData);
+
+  // Create an array of one product per category
+  const filteredProducts = Object.values(groupedProducts).map(
+    (categoryProducts) => categoryProducts[0] // Take the first product from each category
+  );
+
   const onHandleProductDetail = (sku) => {};
 
   return (
@@ -48,7 +68,7 @@ const Carousel = () => {
         Hot Products
       </Typography>
       <Slider {...settings}>
-        {productData.map((slide) => (
+        {filteredProducts.map((slide) => (
           <div
             key={slide.sku}
             onClick={() => navigate(`/product/${slide.sku}`)}
@@ -56,7 +76,7 @@ const Carousel = () => {
             <Box className="carousel-slide">
               <img
                 src={slide.imageUrl}
-                alt={slide.author}
+                alt={slide.name}
                 className="carousel-image"
               />
               <Typography variant="h6" sx={{ marginTop: 1 }} color="optional">

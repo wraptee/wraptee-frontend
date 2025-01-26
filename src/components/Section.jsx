@@ -39,36 +39,32 @@ const Section = ({ title, items }) => {
                 },
                 display: "flex",
                 flexDirection: "column",
+                height: "100%",
               }}
             >
               <Box
                 className="section-card-image-container"
                 sx={{
-                  aspectRatio: "4/3", // Ensures consistent card image aspect ratio
                   width: "100%",
-                  overflow: "hidden",
+                  height: "200px", // Consistent height for images
+                  backgroundColor: "#f5f5f5",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  backgroundColor: "#f5f5f5", // Fallback background
+                  overflow: "hidden",
                 }}
               >
                 <img
                   src={item.image}
                   alt={item.name}
                   className="section-card-image"
-                  style={{
-                    maxWidth: "100%",
-                    maxHeight: "100%",
-                    objectFit: "contain", // Ensures the full image is visible
-                  }}
                 />
               </Box>
               <CardContent
                 sx={{
                   textAlign: "center",
                   padding: 2,
-                  flexGrow: 1, // Ensures card content grows to fill available space
+                  flexGrow: 1,
                 }}
               >
                 <Typography

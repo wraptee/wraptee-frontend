@@ -1,3 +1,4 @@
+/* section.css */
 .section {
   padding: 20px;
   background-color: #f9f9f9;
@@ -11,6 +12,7 @@
   color: #ff6347;
 }
 
+/* Style for each card */
 .section-card {
   border-radius: 12px;
   overflow: hidden;
@@ -21,25 +23,30 @@
   height: 100%;
 }
 
+/* Consistent image container size */
 .section-card-image-container {
-  aspect-ratio: 4 / 3; /* Ensures all images have the same container size */
   width: 100%;
-  background-color: #f5f5f5; /* Placeholder color for images */
+  height: 200px;  /* Fixed height for consistent image size */
+  background-color: #f5f5f5; /* Fallback background for empty images */
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden; /* Prevents image from overflowing */
 }
 
+/* Ensure the image fits and doesn't get cut off */
 .section-card-image {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Ensures the full image is visible inside the container */
+  object-fit: contain; /* Ensures the full image is visible */
 }
 
+/* Card text style */
 .section-name {
   color: #333;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  text-align: center;
 }
 
 /* Responsive adjustments for smaller screens */
@@ -50,5 +57,23 @@
 
   .section-card {
     margin-bottom: 10px;
+  }
+
+  .section-card-image-container {
+    height: 150px;  /* Slightly smaller image size on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 8px;
+  }
+
+  .section-card {
+    margin-bottom: 8px;
+  }
+
+  .section-card-image-container {
+    height: 130px;  /* Even smaller height on very small screens */
   }
 }
