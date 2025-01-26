@@ -91,6 +91,7 @@ const LoginPage = () => {
       email,
       phoneNumber
     );
+    loginUser({ name: user.displayName, email: user.email, phoneNumber });
     if (success) {
       alert("Your information has been sent successfully!");
       setOpenModal(false);
@@ -244,7 +245,7 @@ const LoginPage = () => {
                   value={phoneNumber}
                   onChange={handlePhoneNumberChange}
                   fullWidth
-                  color="primary"
+                  color="optional"
                   style={{ marginBottom: "20px" }}
                   error={!!phoneError}
                   helperText={phoneError}
@@ -260,7 +261,7 @@ const LoginPage = () => {
                 {isPhoneNumberEntered && !phoneError && (
                   <Button
                     variant="contained"
-                    color="primary"
+                    color="optional"
                     onClick={handleSubmit}
                     sx={{ marginTop: 2, color: "white" }}
                     fullWidth

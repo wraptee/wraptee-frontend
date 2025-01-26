@@ -59,6 +59,7 @@ export const CartProvider = ({ children }) => {
   // Login user with phone number
   const loginUser = (userDetails, phoneNumber) => {
     setUser(userDetails); // Save user details (e.g., from Google login)
+    console.log(phoneNumber, "my phone numerb")
     setPhone(phoneNumber); // Store phone number
   };
 

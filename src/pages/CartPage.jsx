@@ -48,7 +48,6 @@ const CartPage = () => {
   const handleCloseSnackbar = () => {
     setSnackbar({ ...snackbar, open: false });
   };
-
   // Handle checkout
   const handleCheckout = async () => {
     if (cart.length === 0) return;
