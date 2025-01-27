@@ -34,13 +34,25 @@
     height: 35px;
     bottom: 80px; /* Adjust position for mobile screens */
     right: 15px;
-
   }
-  .css-1t03rlc-MuiGrid-root .MuiGrid-item{
-    padding-left: 0px !important;
+
+  /* Adjust grid padding and width */
+  .MuiGrid-item {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .fixed-footer {
     font-size: 12px;
+  }
+
+  /* Ensure no extra space in footer */
+  .MuiGrid-container {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .MuiBox-root {
+    padding: 10px;
   }
 }

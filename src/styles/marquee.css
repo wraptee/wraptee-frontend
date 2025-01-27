@@ -1,0 +1,40 @@
+/* Marquee container that holds the scrolling text */
+.marquee-container {
+  background-color: #000; /* Black background to match your website */
+  padding: 10px 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Hides the content outside the container */
+  z-index: 9999;
+}
+
+/* The content inside the marquee */
+.marquee-content {
+  display: flex;
+  white-space: nowrap; /* Prevents line breaks */
+  animation: marquee 30s linear infinite; /* Smooth scroll effect */
+}
+
+/* Individual marquee items */
+.marquee-item {
+  color: yellow; /* White text */
+  font-size: 18px; /* Adjust to the desired font size */
+  font-weight: 500;
+  padding: 0 30px; /* Space between items */
+}
+
+/* Animation: Scroll the content from right to left */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Start from the right side */
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left side */
+  }
+}
+
+@media (max-width: 600px) {
+  .marquee-item {
+    font-size: 18px; /* Adjust font size for smaller screens */
+  }
+}

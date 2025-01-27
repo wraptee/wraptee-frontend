@@ -16,14 +16,18 @@ import Layout from "./pages/Layout";
 import LoginPage from "./pages/LoginPage";
 import WhatsAppButton from "./components/WhatsappComponent";
 import ScrollToTop from "./components/scrollToTop";
+import Marquee from "./components/Marquee";
 
 
 const App = () => (
   <CartProvider>
     <Router>
       <ScrollToTop />
+      {/* Include the Marquee component */}
+      <Marquee />
       <Layout>
         <div className="app-content">
+
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/" element={<HomePage />} />

@@ -27,7 +27,6 @@ const Footer = () => {
       document.documentElement.scrollTop ||
       document.body.scrollTop;
 
-    console.log("ScrollY:", scrollY); // Debugging
     if (scrollY > 300) {
       setShowScroll(true); // Show button
     } else {
@@ -36,11 +35,9 @@ const Footer = () => {
   };
 
   useEffect(() => {
-    console.log("Adding scroll listener"); // Debugging
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      console.log("Removing scroll listener"); // Debugging
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -52,6 +49,7 @@ const Footer = () => {
           backgroundColor: "#000000",
           color: "white",
           padding: "20px 10px",
+          width: "100%", // Ensure footer takes up the full width
         }}
       >
         <Grid
@@ -64,7 +62,7 @@ const Footer = () => {
           }}
         >
           {/* About Section */}
-          <Grid item xs={12} sm={6} md={4}>
+          {/* <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom>
               About Us
             </Typography>
@@ -73,10 +71,10 @@ const Footer = () => {
               business and personal needs. From calendars to packaging
               solutions, we've got you covered!
             </Typography>
-          </Grid>
+          </Grid> */}
 
           {/* Links Section */}
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom>
               Quick Links
             </Typography>
@@ -107,7 +105,7 @@ const Footer = () => {
           </Grid>
 
           {/* Policies Section */}
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom>
               Policies
             </Typography>
@@ -151,7 +149,7 @@ const Footer = () => {
           </Grid>
 
           {/* Contact Section */}
-          <Grid item xs={12} sm={6} md={4}>
+          <Grid item xs={12} sm={6} md={3}>
             <Typography variant="h6" gutterBottom>
               Contact Us
             </Typography>
