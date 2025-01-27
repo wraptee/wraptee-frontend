@@ -344,7 +344,7 @@ const productData = [
   {
     sku: "dpl001",
     name: "Elegant Leather Planner",
-    price: 19,
+    price: 599,
     category: "diaries or planner",
     imageUrl: ImageLinks.cafe,
     description: "Organize your life with the Elegant Leather Planner. Featuring premium leather covers and smooth pages, it’s perfect for daily schedules, goal setting, and creative journaling.",
@@ -352,7 +352,7 @@ const productData = [
   {
     sku: "dpl002",
     name: "Classic Hardcover Diary",
-    price: 19,
+    price: 599,
     category: "diaries or planner",
     imageUrl: ImageLinks.cafe,
     description: "Capture your thoughts and ideas with the Classic Hardcover Diary. Its durable binding and high-quality paper make it an ideal companion for journaling, note-taking, or sketching.",
@@ -360,7 +360,7 @@ const productData = [
   {
     sku: "dpl003",
     name: "Portable Pocket Planner",
-    price: 19,
+    price: 599,
     category: "diaries or planner",
     imageUrl: ImageLinks.cafe,
     description: "Stay on top of your schedule wherever you go with the Portable Pocket Planner. Its compact size fits perfectly in your bag, ensuring productivity on the move.",
@@ -368,7 +368,7 @@ const productData = [
   {
     sku: "dpl004",
     name: "Personalized Custom Planner",
-    price: 29,
+    price: 599,
     category: "diaries or planner",
     imageUrl: ImageLinks.cafe,
     description: "Design your own planner with the Personalized Custom Planner. Tailor it with your favorite colors, layouts, or designs to suit your unique style and organizational needs.",
@@ -377,7 +377,7 @@ const productData = [
   {
     sku: "org001",
     name: "Stylish Desk Organizer",
-    price: 19,
+    price: 599,
     category: "organiser",
     imageUrl: ImageLinks.cafe,
     description: "Keep your workspace tidy with the Stylish Desk Organizer. Featuring multiple compartments, it’s perfect for holding pens, stationery, and gadgets, adding efficiency to your desk setup.",
@@ -385,7 +385,7 @@ const productData = [
   {
     sku: "org002",
     name: "Adjustable Drawer Organizer",
-    price: 19,
+    price: 599,
     category: "organiser",
     imageUrl: ImageLinks.cafe,
     description: "Transform your drawers with the Adjustable Drawer Organizer. Its modular design helps you neatly arrange cutlery, tools, or office supplies, bringing order to every drawer.",
@@ -393,7 +393,7 @@ const productData = [
   {
     sku: "org003",
     name: "Compact Travel Organizer",
-    price: 19,
+    price: 599,
     category: "organiser",
     imageUrl: ImageLinks.cafe,
     description: "Simplify your journeys with the Compact Travel Organizer. Designed to store essentials like cables, chargers, and toiletries, it’s the ultimate travel companion for staying organized on the go.",
@@ -401,7 +401,7 @@ const productData = [
   {
     sku: "org004",
     name: "Customizable Multi-Use Organizer",
-    price: 29,
+    price: 599,
     category: "organiser",
     imageUrl: ImageLinks.cafe,
     description: "Personalize your storage with the Customizable Multi-Use Organizer. Perfect for home or office, its versatile design and customizable compartments cater to your unique organizational needs.",
@@ -411,7 +411,7 @@ const productData = [
   {
     sku: "dpl001",
     name: "Elegant Leather Planner",
-    price: 19,
+    price: 599,
     category: "diaries or planner",
     imageUrl: ImageLinks.cafe,
     description: "Organize your life with the Elegant Leather Planner. Featuring premium leather covers and smooth pages, it’s perfect for daily schedules, goal setting, and creative journaling.",
@@ -419,7 +419,7 @@ const productData = [
   {
     sku: "dpl002",
     name: "Classic Hardcover Diary",
-    price: 19,
+    price: 599,
     category: "diaries or planner",
     imageUrl: ImageLinks.cafe,
     description: "Capture your thoughts and ideas with the Classic Hardcover Diary. Its durable binding and high-quality paper make it an ideal companion for journaling, note-taking, or sketching.",
@@ -427,7 +427,7 @@ const productData = [
   {
     sku: "dpl003",
     name: "Portable Pocket Planner",
-    price: 19,
+    price: 599,
     category: "diaries or planner",
     imageUrl: ImageLinks.cafe,
     description: "Stay on top of your schedule wherever you go with the Portable Pocket Planner. Its compact size fits perfectly in your bag, ensuring productivity on the move.",
@@ -435,7 +435,7 @@ const productData = [
   {
     sku: "dpl004",
     name: "Personalized Custom Planner",
-    price: 29,
+    price: 599,
     category: "diaries or planner",
     imageUrl: ImageLinks.cafe,
     description: "Design your own planner with the Personalized Custom Planner. Tailor it with your favorite colors, layouts, or designs to suit your unique style and organizational needs.",
