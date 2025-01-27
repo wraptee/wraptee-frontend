@@ -12,7 +12,7 @@
 .marquee-content {
   display: flex;
   white-space: nowrap; /* Prevents line breaks */
-  animation: marquee 30s linear infinite; /* Smooth scroll effect */
+  animation: marquee 25s linear infinite; /* Smooth scroll effect */
 }
 
 /* Individual marquee items */

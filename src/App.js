@@ -17,6 +17,7 @@ import LoginPage from "./pages/LoginPage";
 import WhatsAppButton from "./components/WhatsappComponent";
 import ScrollToTop from "./components/scrollToTop";
 import Marquee from "./components/Marquee";
+import ProductPage from "./pages/Product";
 
 
 const App = () => (
@@ -31,6 +32,7 @@ const App = () => (
           <Routes>
             <Route path="/login" element={<LoginPage />} />
             <Route path="/" element={<HomePage />} />
+            <Route path="/products" element={<ProductPage />} />
             <Route path="/category/all/search/:searchQuery" element={<CategoryPage />} />
             <Route path="/category/:categoryName" element={<CategoryPage />} />
             <Route path="/product/:sku" element={<ProductDetailPage />} />

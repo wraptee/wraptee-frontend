@@ -12,7 +12,7 @@ const SupportPolicy = () => {
       >
         Support Policy
       </Typography>
-      <Typography textAlign={"center"}>
+      <Typography color="optional" textAlign={"center"}>
         Support Policy Home "Support Policy" Anshil Wellness Support Policy
         Effective Date: September 10, 2023 Thank you for choosing Anshil
         Wellness as your trusted partner in your wellness journey. At Anshil

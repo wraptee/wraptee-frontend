@@ -89,3 +89,53 @@
     font-size: 14px !important; /* Smaller font size for buttons */
   }
 }
+
+/* Navbar Styles */
+.navbar-logo {
+  height: 70px !important;
+  width: auto !important;
+}
+
+/* Hover effects for navbar buttons */
+.navbar-buttons .MuiButton-root:hover {
+  background-color: "#ff6347"; /* Subtle hover color change */
+  transition: background-color 0.3s ease;
+}
+
+.navbar-buttons .MuiTypography-root:hover {
+  color: "#ff6347"; /* Hover effect for user name */
+  transition: color 0.3s ease;
+}
+
+/* Avatar Styling for Drawer */
+.MuiListItemText-root .MuiTypography-root {
+  font-weight: 600;
+  color: "#ff6347";
+}
+
+.MuiAvatar-root {
+  margin-right: 10px;
+  background-color: "#ff6347";
+}
+
+.MuiDrawer-paper {
+  background-color: #f5f5f5;
+  width: 240px !important;
+}
+
+/* Make cart icon in the drawer clickable with padding */
+.navbar-cart-link {
+  padding: 10px 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Subtle transition for cart button */
+.navbar-cart-link:hover {
+  background-color: #00796b;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+

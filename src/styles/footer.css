@@ -37,10 +37,10 @@
   }
 
   /* Adjust grid padding and width */
-  .MuiGrid-item {
+  /* .MuiGrid-item {
     padding-left: 0 !important;
     padding-right: 0 !important;
-  }
+  } */
 
   .fixed-footer {
     font-size: 12px;

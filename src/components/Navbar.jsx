@@ -13,6 +13,8 @@ import {
   List,
   ListItem,
   ListItemText,
+  Avatar,
+  Divider,
 } from "@mui/material";
 import logo from "../assets/images/logo.png";
 import SearchIcon from "@mui/icons-material/Search";
@@ -21,6 +23,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useNavigate } from "react-router-dom";
 import "../styles/navbar.css";
+import ImageLinks from "../utils/imageLink";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -136,7 +139,7 @@ const Navbar = () => {
                   textTransform: "capitalize",
                 }}
               >
-                {user.name}
+                Welcome, {user.name} 😊
               </Typography>
               <Button
                 color="inherit"
@@ -175,10 +178,42 @@ const Navbar = () => {
         }}
       >
         <List>
-          <ListItem button onClick={() => navigate("/")}>
+          <ListItem button>
+            <Typography variant="body2" color="textSecondary"></Typography>
+          </ListItem>
+          <ListItem
+            color="inherit"
+            underline="hover"
+            style={{ cursor: "pointer" }}
+          >
+            <img
+              src={ImageLinks.blackLogo}
+              alt="Logo"
+              className="navbar-logo"
+            />
+          </ListItem>
+          <ListItem button>
+            <Typography variant="h6" color="optional">
+              Welcome, {user?.name} 😊
+            </Typography>
+          </ListItem>
+          <Divider />
+          <ListItem
+            button
+            onClick={() => {
+              setDrawerOpen(false);
+              navigate("/");
+            }}
+          >
             <ListItemText primary="Home" />
           </ListItem>
-          <ListItem button onClick={() => navigate("/products")}>
+          <ListItem
+            button
+            onClick={() => {
+              setDrawerOpen(false);
+              navigate("/products");
+            }}
+          >
             <ListItemText primary="Products" />
           </ListItem>
           {!user ? (
@@ -192,7 +227,7 @@ const Navbar = () => {
               </ListItem>
             </>
           )}
-          <ListItem button onClick={handleCartClick}>
+          <ListItem button onClick={handleCartClick} color="optioanl">
             <ListItemText primary="Cart" />
           </ListItem>
         </List>
