@@ -54,16 +54,17 @@ const Carousel = () => {
     (categoryProducts) => categoryProducts[0] // Take the first product from each category
   );
 
-  const onHandleProductDetail = (sku) => {};
-
   return (
     <Box className="carousel-container">
       <Typography
         className="carousel-title"
         variant="h4"
         gutterBottom
-        mt={2}
+        color="optional"
+        mt={5}
         fontWeight={600}
+        textAlign={"center"}
+        mb={5}
       >
         Hot Products
       </Typography>
@@ -74,12 +75,18 @@ const Carousel = () => {
             onClick={() => navigate(`/product/${slide.sku}`)}
           >
             <Box className="carousel-slide">
-              <img
-                src={slide.imageUrl}
-                alt={slide.name}
-                className="carousel-image"
-              />
-              <Typography variant="h6" sx={{ marginTop: 1 }} color="optional">
+              <Box className="carousel-image-container">
+                <img
+                  src={slide.imageUrl}
+                  alt={slide.name}
+                  className="carousel-image"
+                />
+              </Box>
+              <Typography
+                variant="h6"
+                className="carousel-item-title"
+                color="optional"
+              >
                 {slide.name}
               </Typography>
             </Box>

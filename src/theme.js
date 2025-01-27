@@ -14,6 +14,16 @@ const theme = createTheme({
     }
 
   },
+  components: {
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+          listStyleType: 'none !important',
+        },
+      },
+    },
+  },
+
   typography: {
     fontFamily: 'Roboto, Arial, sans-serif',
   },

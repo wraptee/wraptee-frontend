@@ -1,69 +1,74 @@
 /* carousel.css */
 .carousel-container {
-  width: 100%; /* Full width */
-  height: 50vh; /* Adjust height to fit viewport, reduced for better mobile experience */
+  width: 100%;
+  height: 50vh;
   position: relative;
-  margin-bottom: 20px; /* Adds space below the carousel */
+  margin-bottom: 20px;
 }
 
 .carousel-slide {
   padding: 10px;
   background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a shadow to separate each item */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin: 0 10px; /* Adds horizontal space between items */
-  height: 100%; /* Ensures card height is consistent */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  margin: 0 10px;
+  height: 100%;
 }
 
-.carousel-slide img {
+.carousel-image-container {
   width: 100%;
-  height: 200px; /* Fix image height for consistent sizing */
-  border-radius: 8px;
-  object-fit: contain; /* Prevents image from being cut off and ensures it fits within the container */
-  object-position: center; /* Centers the image within the container */
+  height: 200px; /* Fixed height for consistent image sizes */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures no overflow from larger images */
 }
 
-.carousel-title {
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the full image is visible */
+}
+
+.carousel-item-title {
+  margin-top: 10px;
   text-align: center;
-  color: #FF6347; /* Customize the title color */
-  margin-top: 20px;
 }
 
-/* Make carousel responsive for mobile devices */
+/* Responsive adjustments for mobile devices */
 @media (max-width: 768px) {
   .carousel-container {
-    height: 45vh; /* Adjust height on smaller screens to save space */
-  }
-
-  .carousel-slide img {
-    max-height: 150px; /* Limit image height to fit mobile screens */
-    object-fit: contain; /* Ensure full image visibility */
+    height: 45vh; /* Adjust height for smaller screens */
   }
 
   .carousel-slide {
-    margin: 0 8px; /* Smaller margin on mobile for better space distribution */
+    margin: 0 8px;
+  }
+
+  .carousel-image-container {
+    height: 150px; /* Reduce height for smaller screens */
+  }
+
+  .carousel-image {
+    max-height: 100%; /* Maintain aspect ratio */
   }
 }
 
 @media (max-width: 480px) {
   .carousel-container {
-    height: 40vh; /* Adjust further on very small screens */
-  }
-
-  .carousel-slide img {
-    max-height: 120px; /* Further limit image height for smaller screens */
-    object-fit: contain; /* Ensure full image visibility */
+    height: 40vh; /* Further adjust height for very small screens */
   }
 
   .carousel-slide {
-    margin: 0 5px; /* Even smaller margin on very small screens */
+    margin: 0 5px;
+  }
+
+  .carousel-image-container {
+    height: 120px; /* Further reduce height for very small screens */
   }
 }

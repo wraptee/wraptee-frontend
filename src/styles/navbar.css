@@ -20,6 +20,10 @@
   width: auto !important; /* Maintain aspect ratio */
 }
 
+.no-bullets .MuiListItem-root{
+  list-style-type: none !important;
+}
+
 /* Centered Search Bar */
 .navbar-search {
   margin-left: 10px !important;

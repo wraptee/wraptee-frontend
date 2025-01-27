@@ -156,7 +156,8 @@ const Footer = () => {
             <Typography variant="body2">Phone: +91 9811873015</Typography>
             <Typography variant="body2">Email: wraptee3@gmail.com</Typography>
             <Typography variant="body2">
-              B-98, Himgiri Apartment, Kalkaji Extension, New Delhi 110019
+              B-98, Himgiri Apartment, Kalkaji <br></br> Extension, New Delhi
+              110019
             </Typography>
           </Grid>
         </Grid>

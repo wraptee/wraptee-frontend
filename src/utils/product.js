@@ -44,7 +44,7 @@ const productData = [
   },
   {
     sku: "cst006",
-    name: "Rustic Wooden Coaster (6pc)",
+    name: "Rustic Elegant Wooden Coaster (6pc)",
     price: 499,
     category: "coaster",
     imageUrl: ImageLinks.woodenCoaster1,

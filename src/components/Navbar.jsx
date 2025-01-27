@@ -41,15 +41,18 @@ const Navbar = () => {
   };
 
   const handleLogin = () => {
+    setDrawerOpen(false);
     navigate("/login");
   };
 
   const handleLogout = () => {
+    setDrawerOpen(false);
     logoutUser();
     navigate("/");
   };
 
   const handleCartClick = () => {
+    setDrawerOpen(false);
     navigate("/cart");
   };
 
@@ -177,14 +180,17 @@ const Navbar = () => {
           display: { xs: "block", sm: "none" }, // Show only on mobile view
         }}
       >
-        <List>
+        <List
+          className="no-bullets"
+          sx={{ listStyleType: "none", listStyle: "none", paddingLeft: 0 }}
+        >
           <ListItem button>
             <Typography variant="body2" color="textSecondary"></Typography>
           </ListItem>
           <ListItem
             color="inherit"
             underline="hover"
-            style={{ cursor: "pointer" }}
+            sx={{ listStyleType: "none" }}
           >
             <img
               src={ImageLinks.blackLogo}
@@ -192,11 +198,14 @@ const Navbar = () => {
               className="navbar-logo"
             />
           </ListItem>
-          <ListItem button>
-            <Typography variant="h6" color="optional">
-              Welcome, {user?.name} 😊
-            </Typography>
-          </ListItem>
+          {user?.name && (
+            <ListItem button>
+              <Typography variant="h6" color="optional">
+                Welcome, {user?.name} 😊
+              </Typography>
+            </ListItem>
+          )}
+
           <Divider />
           <ListItem
             button

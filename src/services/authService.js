@@ -49,3 +49,31 @@ export const sendOrderToBackend = async (orderDetails) => {
     return { success: false, message: 'Failed to place order' };
   }
 };
+
+// Function to send contact query to backend
+export const sendQueryToBackend = async (name, email, phoneNumber, message,) => {
+  try {
+    const response = await fetch(`${BASE_URL}/contact-us`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: name,
+        email: email,
+        phoneNumber: phoneNumber,
+        message: message
+      }),
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      return { success: true, message: 'Query sent successfully' };
+    } else {
+      return { success: false, message: data.message || 'Failed to sent query' };
+    }
+  } catch (error) {
+    console.error('Error sending  query:', error);
+    return { success: false, message: 'Failed to send query' };
+  }
+};
