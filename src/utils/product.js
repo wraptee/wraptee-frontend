@@ -275,7 +275,7 @@ const productData = [
   {
     sku: "sipper007",
     name: "Minimalist White Personalized Sipper",
-    price: 299,
+    price: 399,
     category: "sipper",
     imageUrl: ImageLinks.sipperWhite,
     description: "Keep it classic with the Customize White Sipper. Perfect for minimalists, its clean white finish pairs beautifully with custom prints, making it a versatile and stylish choice for all occasions.",
