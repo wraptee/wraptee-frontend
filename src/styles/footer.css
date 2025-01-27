@@ -34,6 +34,10 @@
     height: 35px;
     bottom: 80px; /* Adjust position for mobile screens */
     right: 15px;
+
+  }
+  .css-1t03rlc-MuiGrid-root .MuiGrid-item{
+    padding-left: 0px !important;
   }
 
   .fixed-footer {

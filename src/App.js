@@ -1,5 +1,5 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { CartProvider } from "./store/cartContext";
 import CategoryPage from "./pages/CategoryPage";
 import HomePage from "./pages/HomePage";
@@ -15,10 +15,13 @@ import ProductDetailPage from "./pages/ProductDetailPage";
 import Layout from "./pages/Layout";
 import LoginPage from "./pages/LoginPage";
 import WhatsAppButton from "./components/WhatsappComponent";
+import ScrollToTop from "./components/scrollToTop";
+
 
 const App = () => (
   <CartProvider>
     <Router>
+      <ScrollToTop />
       <Layout>
         <div className="app-content">
           <Routes>

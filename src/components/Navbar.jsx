@@ -71,7 +71,7 @@ const Navbar = () => {
         <TextField
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          placeholder="Search for categories..."
+          placeholder="Search.."
           onKeyDown={handleSearch}
           variant="outlined"
           size="small"

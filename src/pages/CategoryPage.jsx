@@ -67,9 +67,9 @@ const CategoryPage = () => {
                   <Typography variant="h6" color="optional" fontWeight={600}>
                     {product.name}
                   </Typography>
-                  <Typography color="optional" variant="body2">
+                  {/* <Typography color="optional" variant="body2">
                     {product.description}
-                  </Typography>
+                  </Typography> */}
                   <Typography color="optional" variant="body1">
                     ₹{product.price}
                   </Typography>

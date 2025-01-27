@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow: auto; /* Ensure content scrolls if necessary */
 }
+
 
 /* Main content fills the available space */
 .main-content {

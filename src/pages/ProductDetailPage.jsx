@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate, useLocation } from "react-router-dom";
 import {
   Grid,
   Card,
@@ -22,14 +22,11 @@ const ProductDetailPage = () => {
   });
   const { sku } = useParams();
   const navigate = useNavigate();
+  const location = useLocation(); // Detect location changes
   const { addToCart, user } = useCart();
 
   // Find the product details based on the sku from the URL
   const product = productData.find((product) => product.sku === sku);
-
-  if (!product) {
-    return <Typography variant="h6">Product not found</Typography>;
-  }
 
   // Open Snackbar
   const handleOpenSnackbar = (message, severity = "success") => {
@@ -49,6 +46,23 @@ const ProductDetailPage = () => {
       handleOpenSnackbar("Please login first for shopping", "error");
       navigate("/login");
     }
+  };
+
+  // Scroll to top whenever the location changes (i.e., the page changes)
+  useEffect(() => {
+    // Delay scroll action to ensure DOM is fully rendered
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100); // Adjust the timeout value if needed
+  }, [location]); // Dependency on location to trigger scroll on route change
+
+  // If no product is found, show a message
+  if (!product) {
+    return <Typography variant="h6">Product not found</Typography>;
+  }
+
+  const handleProductClick = (relatedProductSku) => {
+    navigate(`/product/${relatedProductSku}`);
   };
 
   return (
@@ -91,6 +105,7 @@ const ProductDetailPage = () => {
           <Button
             variant="contained"
             color="optional"
+            sx={{ color: "white" }}
             className="add-to-cart-button"
             onClick={onHandleCart}
           >
@@ -122,7 +137,7 @@ const ProductDetailPage = () => {
               <Grid item xs={12} sm={6} md={3} key={relatedProduct.sku}>
                 <Card
                   className="related-product-card"
-                  onClick={() => navigate(`/product/${relatedProduct.sku}`)}
+                  onClick={() => handleProductClick(relatedProduct.sku)}
                 >
                   <Box className="related-product-image-container">
                     <img
@@ -139,13 +154,6 @@ const ProductDetailPage = () => {
                       textAlign="center"
                     >
                       {relatedProduct.name}
-                    </Typography>
-                    <Typography
-                      color="optional"
-                      variant="body2"
-                      textAlign="center"
-                    >
-                      {relatedProduct.description}
                     </Typography>
                     <Typography
                       variant="body1"
