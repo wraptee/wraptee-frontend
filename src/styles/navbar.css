@@ -143,3 +143,28 @@
   transition: background-color 0.3s ease;
 }
 
+/* Cart Icon for Mobile View */
+.navbar-cart-icon {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .navbar-cart-icon {
+    margin-right: 8px; /* Adjust spacing for smaller screens */
+  }
+}
+
+/* Navbar Toolbar */
+.navbar-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Adjusted Drawer for Mobile */
+.MuiDrawer-paper {
+  width: 240px !important; /* Drawer width */
+}

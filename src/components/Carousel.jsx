@@ -66,7 +66,7 @@ const Carousel = () => {
         textAlign={"center"}
         mb={5}
       >
-        Hot Products
+        Best Selling Products
       </Typography>
       <Slider {...settings}>
         {filteredProducts.map((slide) => (

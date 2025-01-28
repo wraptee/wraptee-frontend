@@ -52,7 +52,7 @@ const LoginPage = () => {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
       setUser(user);
-      loginUser({ name: user.displayName, email: user.email, phoneNumber });
+      loginUser({ name: user.displayName, email: user.email }, phoneNumber); // Persist user details and phone
       setEmail(user.email);
       setOpenModal(true);
     } catch (error) {

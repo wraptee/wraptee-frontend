@@ -1,86 +1,156 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 
 // Create the context
 const CartContext = createContext();
 
 // Cart Provider Component
 export const CartProvider = ({ children }) => {
-  // State for cart
-  const [cart, setCart] = useState([]);
-  // State for user authentication and phone number
-  const [user, setUser] = useState(null);
-  const [phone, setPhone] = useState(null); // Store phone number in context
+  // Initialize cart state from localStorage
+  const [cart, setCart] = useState(() => {
+    try {
+      const savedCart = localStorage.getItem("cart");
+      return savedCart ? JSON.parse(savedCart) : [];
+    } catch (error) {
+      console.error("Error parsing cart from localStorage:", error);
+      return [];
+    }
+  });
 
-  // Add product to cart
+  // Initialize user and phone state from localStorage
+  const [user, setUser] = useState(() => {
+    try {
+      const savedUser = localStorage.getItem("user");
+      return savedUser ? JSON.parse(savedUser) : null;
+    } catch (error) {
+      console.error("Error parsing user from localStorage:", error);
+      return null;
+    }
+  });
+
+  const [phone, setPhone] = useState(() => {
+    try {
+      const savedPhone = localStorage.getItem("phone");
+      return savedPhone || null;
+    } catch (error) {
+      console.error("Error retrieving phone from localStorage:", error);
+      return null;
+    }
+  });
+
+  // Function to add product to cart
   const addToCart = (product) => {
     const existingProduct = cart.find((item) => item.sku === product.sku);
+    let updatedCart;
     if (existingProduct) {
-      setCart(
-        cart.map((item) =>
-          item.sku === product.sku
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
+      updatedCart = cart.map((item) =>
+        item.sku === product.sku
+          ? { ...item, quantity: item.quantity + 1 }
+          : item
       );
     } else {
-      setCart([...cart, { ...product, quantity: 1 }]);
+      updatedCart = [...cart, { ...product, quantity: 1 }];
     }
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  // Remove product from cart
+  // Function to remove product from cart
   const removeFromCart = (sku) => {
-    setCart(cart.filter((item) => item.sku !== sku));
+    const updatedCart = cart.filter((item) => item.sku !== sku);
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  // Update product quantity in cart
+  // Function to update product quantity in cart
   const updateQuantity = (sku, quantity) => {
-    setCart((prevCart) =>
-      prevCart.map((item) =>
-        item.sku === sku ? { ...item, quantity } : item
-      )
+    const updatedCart = cart.map((item) =>
+      item.sku === sku ? { ...item, quantity } : item
     );
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
   };
 
-  // Clear the cart
+  // Function to clear the cart
   const clearCart = () => {
     setCart([]);
+    localStorage.removeItem("cart");
   };
 
-  // Calculate total cart quantity
+  // Calculate total quantity in the cart
   const getTotalQuantity = () => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   };
 
-  // Calculate total cart price
+  // Calculate total price of items in the cart
   const getTotalPrice = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 
-  // Login user with phone number
+  // Function to log in a user and store data in localStorage
   const loginUser = (userDetails, phoneNumber) => {
-    setUser(userDetails); // Save user details (e.g., from Google login)
-    console.log(phoneNumber, "my phone numerb")
-    setPhone(phoneNumber); // Store phone number
+    setUser(userDetails);
+    setPhone(phoneNumber);
+    localStorage.setItem("user", JSON.stringify(userDetails));
+    if (phoneNumber) {
+      localStorage.setItem("phone", phoneNumber);
+    }
   };
 
-  // Logout user
+  // Function to log out a user and clear stored data
   const logoutUser = () => {
-    setUser(null); // Clear user data
-    setPhone(null); // Clear phone number
-    clearCart(); // Optionally clear the cart when the user logs out
+    setUser(null);
+    setPhone(null);
+    clearCart();
+    localStorage.removeItem("user");
+    localStorage.removeItem("phone");
   };
+
+  // Effect to synchronize cart state with localStorage
+  useEffect(() => {
+    try {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    } catch (error) {
+      console.error("Error saving cart to localStorage:", error);
+    }
+  }, [cart]);
+
+  // Effect to synchronize user state with localStorage
+  useEffect(() => {
+    try {
+      if (user) {
+        localStorage.setItem("user", JSON.stringify(user));
+      } else {
+        localStorage.removeItem("user");
+      }
+    } catch (error) {
+      console.error("Error saving user to localStorage:", error);
+    }
+  }, [user]);
+
+  // Effect to synchronize phone state with localStorage
+  useEffect(() => {
+    try {
+      if (phone) {
+        localStorage.setItem("phone", phone);
+      } else {
+        localStorage.removeItem("phone");
+      }
+    } catch (error) {
+      console.error("Error saving phone to localStorage:", error);
+    }
+  }, [phone]);
 
   // Context value to share
   const contextValue = {
     cart,
     addToCart,
     removeFromCart,
-    updateQuantity, // Expose updateQuantity function
+    updateQuantity,
     clearCart,
     getTotalQuantity,
     getTotalPrice,
     user,
-    phone, // Expose phone number to context
+    phone,
     loginUser,
     logoutUser,
   };

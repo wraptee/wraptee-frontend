@@ -13,7 +13,6 @@ import {
   List,
   ListItem,
   ListItemText,
-  Avatar,
   Divider,
 } from "@mui/material";
 import logo from "../assets/images/logo.png";
@@ -95,6 +94,30 @@ const Navbar = () => {
             width: { sm: "225px", xs: "100px" }, // Adjust width for mobile
           }}
         />
+        {/* Cart Icon - Always visible */}
+        <IconButton
+          edge="start"
+          color="inherit"
+          aria-label="cart"
+          onClick={handleCartClick}
+          className="navbar-cart-icon"
+          sx={{
+            marginRight: "8px",
+            display: { xs: "flex", sm: "none" }, // Always show on mobile
+          }}
+        >
+          <Badge
+            badgeContent={getTotalQuantity()}
+            color="error"
+            overlap="circular"
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+          >
+            <ShoppingCartIcon fontSize="large" sx={{ color: "white" }} />
+          </Badge>
+        </IconButton>
 
         {/* Mobile Hamburger Menu */}
         <IconButton
@@ -184,20 +207,6 @@ const Navbar = () => {
           className="no-bullets"
           sx={{ listStyleType: "none", listStyle: "none", paddingLeft: 0 }}
         >
-          <ListItem button>
-            <Typography variant="body2" color="textSecondary"></Typography>
-          </ListItem>
-          <ListItem
-            color="inherit"
-            underline="hover"
-            sx={{ listStyleType: "none" }}
-          >
-            <img
-              src={ImageLinks.blackLogo}
-              alt="Logo"
-              className="navbar-logo"
-            />
-          </ListItem>
           {user?.name && (
             <ListItem button>
               <Typography variant="h6" color="optional">
@@ -236,7 +245,7 @@ const Navbar = () => {
               </ListItem>
             </>
           )}
-          <ListItem button onClick={handleCartClick} color="optioanl">
+          <ListItem button onClick={handleCartClick} color="optional">
             <ListItemText primary="Cart" />
           </ListItem>
         </List>

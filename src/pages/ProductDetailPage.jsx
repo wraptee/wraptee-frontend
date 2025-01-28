@@ -173,6 +173,7 @@ const ProductDetailPage = () => {
         autoHideDuration={3000}
         onClose={handleCloseSnackbar}
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        sx={{ marginTop: 5 }}
       >
         <Alert
           onClose={handleCloseSnackbar}
