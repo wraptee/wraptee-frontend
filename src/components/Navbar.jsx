@@ -205,7 +205,12 @@ const Navbar = () => {
       >
         <List
           className="no-bullets"
-          sx={{ listStyleType: "none", listStyle: "none", paddingLeft: 0 }}
+          sx={{
+            listStyleType: "none",
+            listStyle: "none",
+            paddingLeft: 0,
+            mt: 4,
+          }}
         >
           {user?.name && (
             <ListItem button>

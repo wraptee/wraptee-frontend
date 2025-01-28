@@ -62,11 +62,12 @@ const ProductDetailPage = () => {
   }
 
   const handleProductClick = (relatedProductSku) => {
+    document.getElementById("top-element").scrollIntoView();
     navigate(`/product/${relatedProductSku}`);
   };
 
   return (
-    <Box className="product-detail-container">
+    <Box className="product-detail-container" id="top-element">
       <Grid container spacing={4} className="product-detail-grid">
         {/* Product Image */}
         <Grid item xs={12} sm={6} className="product-image-container">
