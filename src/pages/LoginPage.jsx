@@ -223,7 +223,7 @@ const LoginPage = () => {
                 >
                   <CloseIcon />
                 </IconButton>
-                <Typography color="textPrimary" variant="h6" mb={2}>
+                <Typography color="#ff6347" variant="h6" mb={2}>
                   {`Hello, ${user ? user.displayName : ""}`}
                 </Typography>
                 <TextField

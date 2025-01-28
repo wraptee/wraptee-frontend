@@ -102,7 +102,8 @@ const Navbar = () => {
           onClick={handleCartClick}
           className="navbar-cart-icon"
           sx={{
-            marginRight: "8px",
+            marginRight: "1px",
+            marginLeft: "1px",
             display: { xs: "flex", sm: "none" }, // Always show on mobile
           }}
         >
@@ -201,6 +202,8 @@ const Navbar = () => {
         onClose={() => toggleDrawer(false)}
         sx={{
           display: { xs: "block", sm: "none" }, // Show only on mobile view
+          marginLeft: "2px",
+          marginRight: 2,
         }}
       >
         <List
