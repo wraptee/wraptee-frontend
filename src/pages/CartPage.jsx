@@ -48,21 +48,46 @@ const CartPage = () => {
   const handleCloseSnackbar = () => {
     setSnackbar({ ...snackbar, open: false });
   };
+  const BASE_URL = "https://wraptee-backend.vercel.app/api";
+
   // Handle checkout
   const handleCheckout = async () => {
     if (cart.length === 0) return;
 
-    const payload = {
-      name: user?.name || "Guest",
-      email: user?.email || "guest@example.com",
-      phoneNumber: user?.phoneNumber || "Not Provided",
-      cart,
-    };
+    const formData = new FormData();
+    formData.append("name", user?.name || "Guest");
+    formData.append("email", user?.email || "guest@example.com");
+    formData.append("phoneNumber", user?.phoneNumber || "Not Provided");
+
+    // Append cart items to FormData
+    cart.forEach((product, index) => {
+      // Prepend BASE_URL to imageUrl if it is a relative path
+      const fullImageUrl = product.imageUrl.startsWith("/")
+        ? BASE_URL + product.imageUrl
+        : product.imageUrl;
+
+      formData.append(`cart[${index}][imageUrl]`, fullImageUrl);
+      formData.append(`cart[${index}][name]`, product.name);
+      formData.append(`cart[${index}][sku]`, product.sku);
+      formData.append(`cart[${index}][price]`, product.price);
+      formData.append(`cart[${index}][quantity]`, product.quantity);
+      formData.append(`cart[${index}][category]`, product.category);
+      formData.append(`cart[${index}][description]`, product.description);
+    });
+
+    // Append product images
+    cart.forEach((product, index) => {
+      const fullImageUrl = product.imageUrl.startsWith("/")
+        ? BASE_URL + product.imageUrl
+        : product.imageUrl;
+
+      formData.append(`productImages[${index}]`, fullImageUrl);
+    });
 
     setCheckoutLoading(true);
 
     try {
-      const response = await sendOrderToBackend(payload);
+      const response = await sendOrderToBackend(formData);
 
       if (response.success) {
         clearCart(); // Clear the cart after successful checkout

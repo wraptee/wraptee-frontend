@@ -32,10 +32,7 @@ export const sendOrderToBackend = async (orderDetails) => {
   try {
     const response = await fetch(`${BASE_URL}/send-order`, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(orderDetails),
+      body: orderDetails, // Send FormData directly
     });
 
     const data = await response.json();
