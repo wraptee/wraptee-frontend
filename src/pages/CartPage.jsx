@@ -48,46 +48,37 @@ const CartPage = () => {
   const handleCloseSnackbar = () => {
     setSnackbar({ ...snackbar, open: false });
   };
+
   const BASE_URL = "https://wraptee-backend.vercel.app/api";
 
+  // Handle checkout
   // Handle checkout
   const handleCheckout = async () => {
     if (cart.length === 0) return;
 
-    const formData = new FormData();
-    formData.append("name", user?.name || "Guest");
-    formData.append("email", user?.email || "guest@example.com");
-    formData.append("phoneNumber", user?.phoneNumber || "Not Provided");
-
-    // Append cart items to FormData
-    cart.forEach((product, index) => {
-      // Prepend BASE_URL to imageUrl if it is a relative path
-      const fullImageUrl = product.imageUrl.startsWith("/")
-        ? BASE_URL + product.imageUrl
-        : product.imageUrl;
-
-      formData.append(`cart[${index}][imageUrl]`, fullImageUrl);
-      formData.append(`cart[${index}][name]`, product.name);
-      formData.append(`cart[${index}][sku]`, product.sku);
-      formData.append(`cart[${index}][price]`, product.price);
-      formData.append(`cart[${index}][quantity]`, product.quantity);
-      formData.append(`cart[${index}][category]`, product.category);
-      formData.append(`cart[${index}][description]`, product.description);
-    });
-
-    // Append product images
-    cart.forEach((product, index) => {
-      const fullImageUrl = product.imageUrl.startsWith("/")
-        ? BASE_URL + product.imageUrl
-        : product.imageUrl;
-
-      formData.append(`productImages[${index}]`, fullImageUrl);
-    });
+    // Prepare the payload as a plain object
+    const orderDetails = {
+      name: user?.name || "Guest",
+      email: user?.email || "guest@example.com",
+      phoneNumber: user?.phoneNumber || "Not Provided",
+      cart: cart.map((product) => ({
+        name: product.name,
+        sku: product.sku,
+        price: product.price,
+        quantity: product.quantity,
+        category: product.category,
+        description: product.description,
+        // Add the image URL if needed
+        imageUrl: product.imageUrl.startsWith("/")
+          ? BASE_URL + product.imageUrl
+          : product.imageUrl,
+      })),
+    };
 
     setCheckoutLoading(true);
 
     try {
-      const response = await sendOrderToBackend(formData);
+      const response = await sendOrderToBackend(orderDetails); // Send plain object here
 
       if (response.success) {
         clearCart(); // Clear the cart after successful checkout
@@ -105,6 +96,8 @@ const CartPage = () => {
       setCheckoutLoading(false);
     }
   };
+  
+
 
   return (
     <Box className="cart-container">
@@ -144,11 +137,6 @@ const CartPage = () => {
           cart.map((product) => (
             <Grid item xs={12} sm={6} md={4} key={product.sku}>
               <Card className="cart-product-card">
-                <img
-                  src={product.imageUrl}
-                  alt={product.name}
-                  className="cart-product-image"
-                />
                 <CardContent>
                   <Typography
                     variant="h6"

@@ -30,12 +30,36 @@ export const sendUserInfoToBackend = async (email, phoneNumber) => {
 // Function to send order details to the backend
 export const sendOrderToBackend = async (orderDetails) => {
   try {
+    // Extract the details from the order
+    const { name, email, phoneNumber, cart } = orderDetails;
+
+    // Prepare the request payload
+    const payload = {
+      name,
+      email,
+      phoneNumber,
+      cart: cart.map((product) => ({
+        name: product.name,
+        sku: product.sku,
+        price: product.price,
+        quantity: product.quantity,
+        category: product.category,
+        description: product.description,
+        imageUrl: product.imageUrl, // Send image URL if needed
+      })),
+    };
+
+    // Send the payload as JSON
     const response = await fetch(`${BASE_URL}/send-order`, {
       method: 'POST',
-      body: orderDetails, // Send FormData directly
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload), // Send the payload as JSON
     });
 
     const data = await response.json();
+
     if (response.ok) {
       return { success: true, message: 'Order placed successfully' };
     } else {
@@ -47,8 +71,9 @@ export const sendOrderToBackend = async (orderDetails) => {
   }
 };
 
+
 // Function to send contact query to backend
-export const sendQueryToBackend = async (name, email, phoneNumber, message,) => {
+export const sendQueryToBackend = async (name, email, phoneNumber, message) => {
   try {
     const response = await fetch(`${BASE_URL}/contact-us`, {
       method: 'POST',
@@ -67,10 +92,10 @@ export const sendQueryToBackend = async (name, email, phoneNumber, message,) => 
     if (response.ok) {
       return { success: true, message: 'Query sent successfully' };
     } else {
-      return { success: false, message: data.message || 'Failed to sent query' };
+      return { success: false, message: data.message || 'Failed to send query' };
     }
   } catch (error) {
-    console.error('Error sending  query:', error);
+    console.error('Error sending query:', error);
     return { success: false, message: 'Failed to send query' };
   }
 };
