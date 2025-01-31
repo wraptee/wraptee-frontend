@@ -373,7 +373,7 @@ const productData = [
     imageUrl: ImageLinks.cafe,
     description: "Design your own planner with the Personalized Custom Planner. Tailor it with your favorite colors, layouts, or designs to suit your unique style and organizational needs.",
   },
-  // Diaries or Planners
+  // Diaries or Planners/Users/rudra/Downloads/bags photo
   {
     sku: "ppn-29",
     name: "Sleek Black Leather Diary",
@@ -565,8 +565,84 @@ const productData = [
     category: "diaries",
     imageUrl: ImageLinks.woodenBrown,
     description: "Bring the charm of nature to your desk with the Wooden Brown Diary. Its rustic, wooden-inspired cover offers a unique aesthetic that’s perfect for creatives, writers, and those who appreciate the warm, earthy tones of nature."
-  }  
-  // Other categories (packing boxes, bottles or sippers, pens, key chains, trophies, travel bags) can follow the same structure.
-];
+  },
+
+  // Bags
+
+  {
+    sku: "bag-01",
+    name: "Eco-Chic Blue Jute Bag",
+    price: 599,
+    category: "bags",
+    imageUrl: ImageLinks.blueJute,
+    description: "Make a stylish eco-friendly statement with the Eco-Chic Blue Jute Bag! Durable, sustainable, and spacious—perfect for shopping, office, or daily use. Stay trendy while being kind to the planet!"
+  },
+  {
+    sku: "bag-02",
+    name: "Rustic Charm Brown Jute Bag",
+    price: 599,
+    category: "bags",
+    imageUrl: ImageLinks.brownJute,
+    description: "Classic, durable, and naturally stylish! The Rustic Charm Brown Jute Bag blends tradition with modern utility, making it the ideal go-to bag for your everyday essentials."
+  },
+  {
+    sku: "bag-03",
+    name: "Earthy Elegance Dark Brown Jute Bag",
+    price: 599,
+    category: "bags",
+    imageUrl: ImageLinks.darkBrownJute,
+    description: "Embrace the beauty of nature with the Earthy Elegance Dark Brown Jute Bag. Crafted for durability and sophistication, it’s perfect for work, casual outings, or eco-conscious gifting."
+  },
+  {
+    sku: "bag-04",
+    name: "Vibrant Bliss Colorful Jute Bag",
+    price: 599,
+    category: "bags",
+    imageUrl: ImageLinks.colorFulJute,
+    description: "Why choose one color when you can have them all? The Vibrant Bliss Colorful Jute Bag is a fun, stylish, and eco-conscious accessory that adds energy to your everyday look!"
+  },
+  {
+    sku: "bag-05",
+    name: "Elegant Hanging Jute Tote",
+    price: 599,
+    category: "bags",
+    imageUrl: ImageLinks.juteBagWithHanging,
+    description: "Designed for convenience and charm, the Elegant Hanging Jute Tote is perfect for carrying essentials while making a fashion-forward, eco-friendly statement."
+  },
+  {
+    sku: "bag-06",
+    name: "Sunset Glow Orange Jute Bag",
+    price: 599,
+    category: "bags",
+    imageUrl: ImageLinks.orangeBag,
+    description: "Radiate warmth and positivity with the Sunset Glow Orange Jute Bag! A vibrant, stylish, and durable companion for your shopping trips, work, or everyday errands."
+  },
+  {
+    sku: "bag-07",
+    name: "Bold & Beautiful Red Jute Bag",
+    price: 599,
+    category: "bags",
+    imageUrl: ImageLinks.redBag,
+    description: "Turn heads with the Bold & Beautiful Red Jute Bag! Its striking color, eco-friendly material, and spacious design make it the perfect mix of fashion and function."
+  },
+  {
+    sku: "bag-08",
+    name: "Elegant White Window Jute Tote",
+    price: 599,
+    category: "bags",
+    imageUrl: ImageLinks.whiteWindowBag,
+    description: "Minimalist yet sophisticated! The Elegant White Window Jute Tote offers a unique see-through design, blending modern aesthetics with natural sustainability."
+  },
+  {
+    sku: "bag-09",
+    name: "Classic Transparent Window Jute Bag",
+    price: 599,
+    category: "bags",
+    imageUrl: ImageLinks.windowJuteBag,
+    description: "See the beauty of sustainability with the Classic Transparent Window Jute Bag. Stylish, sturdy, and perfect for showcasing your essentials while staying eco-friendly."
+    }
+]
+
+// Other categories (packing boxes, bottles or sippers, pens, key chains, trophies, travel bags) can follow the same structure.
 
 export default productData;

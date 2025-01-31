@@ -135,5 +135,17 @@ const ImageLinks = {
   skyBlue: require('../assets/images/category/planner/skyBlue-PPN-02.jpg'),
   woodenBrown: require('../assets/images/category/planner/woodenBrown-PPN-25.jpg'),
 
+  // Bags
+
+  blueJute: require('../assets/images/category/bags/blueJuteBag.jpg'),
+  brownJute: require('../assets/images/category/bags/brownJuteBag.jpg'),
+  darkBrownJute: require('../assets/images/category/bags/brownJuteBag2.jpg'),
+  colorFulJute: require('../assets/images/category/bags/colorfulJuteBag.jpg'),
+  juteBagWithHanging: require('../assets/images/category/bags/juteBagWithHanging.jpg'),
+  orangeBag: require('../assets/images/category/bags/orangeBag.jpg'),
+  redBag: require('../assets/images/category/bags/redBag.jpg'),
+  whiteWindowBag: require('../assets/images/category/bags/whiteWindowBag.jpg'),
+  windowJuteBag: require('../assets/images/category/bags/windowJuteBag.jpg'),
+
 };
 export default ImageLinks;
