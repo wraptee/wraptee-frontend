@@ -108,11 +108,32 @@ const ImageLinks = {
   skyBlue: require('../assets/images/category/tShirt/skyBlue/skyBlue1.jpg'),
   white: require('../assets/images/category/tShirt/white/white1.jpg'),
 
+  // Diary and Planners
 
-
-
-
-
+  black: require('../assets/images/category/planner/black-PPN-29.jpg'),
+  brightOrange: require('../assets/images/category/planner/brightOrange-PPN-19.jpg'),
+  darkBlue: require('../assets/images/category/planner/darkBlue-PPN-04.jpg'),
+  darkGray: require('../assets/images/category/planner/darkGray-PPN-05.jpg'),
+  darkOrange: require('../assets/images/category/planner/darkOrange-PPN-06.jpg'),
+  deepDarkBlue: require('../assets/images/category/planner/deepDarkBlue-PPN-13.jpg'),
+  deepSkyBlue: require('../assets/images/category/planner/deepSkyBlue-PPN-30.jpg'),
+  deepOrange: require('../assets/images/category/planner/dualOrange-PPN-16.jpg'),
+  elegantGray: require('../assets/images/category/planner/elegantGray-PPN-31.jpg'),
+  fabricatedSkyBlue: require('../assets/images/category/planner/fabricatedSkyBlue-PPN-15.jpg'),
+  fadedBrown: require('../assets/images/category/planner/fadedBrown-PPN-20.jpg'),
+  grayDiary: require('../assets/images/category/planner/grayDiary-PPN-01.jpg'),
+  lightBrown: require('../assets/images/category/planner/lightBrown-PPN-14.jpg'),
+  lightRoyalGreen: require('../assets/images/category/planner/lightGrayRoyal-PPN-23.jpg'),
+  lightSkyBlue: require('../assets/images/category/planner/ligthSkyBlue-PPN-10.jpg'),
+  linedDarkBlue: require('../assets/images/category/planner/linedDarkBlue-PPN-08.jpg'),
+  linedLightBlue: require('../assets/images/category/planner/linedLightBlue-PPN-07.jpg'),
+  maroon: require('../assets/images/category/planner/maroon-PPN-11.jpg'),
+  orange: require('../assets/images/category/planner/orange-PPN-03.jpg'),
+  royalBlue: require('../assets/images/category/planner/royalBlue-PPN-22.jpg'),
+  royalDarkGray: require('../assets/images/category/planner/royalDarkGrayPPN-24.jpg'),
+  shaded: require('../assets/images/category/planner/shaded-PPN-12.jpg'),
+  skyBlue: require('../assets/images/category/planner/skyBlue-PPN-02.jpg'),
+  woodenBrown: require('../assets/images/category/planner/woodenBrown-PPN-25.jpg'),
 
 };
 export default ImageLinks;

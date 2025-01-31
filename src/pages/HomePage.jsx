@@ -15,7 +15,7 @@ const HomePage = () => {
     { name: "Pen", image: ImageLinks.pen },
     { name: "Caps", image: ImageLinks.caps },
     { name: "Watches", image: ImageLinks.clock },
-    { name: "Calendar and Diaries", image: ImageLinks.diary },
+    { name: "Diaries", image: ImageLinks.diary },
   ];
 
   return (

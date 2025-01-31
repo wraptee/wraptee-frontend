@@ -375,72 +375,197 @@ const productData = [
   },
   // Diaries or Planners
   {
-    sku: "org001",
-    name: "Stylish Desk Organizer",
+    sku: "ppn-29",
+    name: "Sleek Black Leather Diary",
     price: 599,
-    category: "organiser",
-    imageUrl: ImageLinks.cafe,
-    description: "Keep your workspace tidy with the Stylish Desk Organizer. Featuring multiple compartments, it’s perfect for holding pens, stationery, and gadgets, adding efficiency to your desk setup.",
+    category: "diaries",
+    imageUrl: ImageLinks.black,
+    description: "Embrace the elegance of simplicity with our Sleek Black Leather Diary. Its smooth black cover exudes sophistication, making it the perfect companion for professionals who appreciate the finer details. Keep your thoughts, ideas, and plans secure in style."
   },
   {
-    sku: "org002",
-    name: "Adjustable Drawer Organizer",
+    sku: "ppn-19",
+    name: "Vibrant Bright Orange Diary",
     price: 599,
-    category: "organiser",
-    imageUrl: ImageLinks.cafe,
-    description: "Transform your drawers with the Adjustable Drawer Organizer. Its modular design helps you neatly arrange cutlery, tools, or office supplies, bringing order to every drawer.",
+    category: "diaries",
+    imageUrl: ImageLinks.brightOrange,
+    description: "Brighten your day and your desk with our Vibrant Bright Orange Diary. With its bold, energetic hue, it stands out as a statement piece that will ignite creativity and inspire productivity. A must-have for those who want to add a pop of color to their workspace."
   },
   {
-    sku: "org003",
-    name: "Compact Travel Organizer",
+    sku: "ppn-04",
+    name: "Deep Blue Serenity Diary",
     price: 599,
-    category: "organiser",
-    imageUrl: ImageLinks.cafe,
-    description: "Simplify your journeys with the Compact Travel Organizer. Designed to store essentials like cables, chargers, and toiletries, it’s the ultimate travel companion for staying organized on the go.",
+    category: "diaries",
+    imageUrl: ImageLinks.darkBlue,
+    description: "Dive into calm with the Deep Blue Serenity Diary. Its rich, serene color evokes peace of mind, making it the perfect space to capture your thoughts, dreams, and plans. Ideal for those seeking clarity and focus in their day-to-day life."
   },
   {
-    sku: "org004",
-    name: "Customizable Multi-Use Organizer",
+    sku: "ppn-05",
+    name: "Elegant Dark Gray Journal",
     price: 599,
-    category: "organiser",
-    imageUrl: ImageLinks.cafe,
-    description: "Personalize your storage with the Customizable Multi-Use Organizer. Perfect for home or office, its versatile design and customizable compartments cater to your unique organizational needs.",
-  },
-
-  // Organizers
-  {
-    sku: "dpl001",
-    name: "Elegant Leather Planner",
-    price: 599,
-    category: "diaries or planner",
-    imageUrl: ImageLinks.cafe,
-    description: "Organize your life with the Elegant Leather Planner. Featuring premium leather covers and smooth pages, it’s perfect for daily schedules, goal setting, and creative journaling.",
+    category: "diaries",
+    imageUrl: ImageLinks.darkGray,
+    description: "The Elegant Dark Gray Journal is the epitome of understated luxury. Its smooth texture and refined shade make it perfect for professionals, students, and creatives alike. Whether you're writing notes or planning your next big project, do it with elegance."
   },
   {
-    sku: "dpl002",
-    name: "Classic Hardcover Diary",
+    sku: "ppn-06",
+    name: "Stylish Dark Orange Diary",
     price: 599,
-    category: "diaries or planner",
-    imageUrl: ImageLinks.cafe,
-    description: "Capture your thoughts and ideas with the Classic Hardcover Diary. Its durable binding and high-quality paper make it an ideal companion for journaling, note-taking, or sketching.",
+    category: "diaries",
+    imageUrl: ImageLinks.darkOrange,
+    description: "Make a bold statement with the Stylish Dark Orange Diary. The dynamic hue pairs perfectly with its high-quality craftsmanship, making it ideal for those who seek creativity, energy, and a touch of flair in their everyday essentials."
   },
   {
-    sku: "dpl003",
-    name: "Portable Pocket Planner",
+    sku: "ppn-13",
+    name: "Rich Deep Dark Blue Diary",
     price: 599,
-    category: "diaries or planner",
-    imageUrl: ImageLinks.cafe,
-    description: "Stay on top of your schedule wherever you go with the Portable Pocket Planner. Its compact size fits perfectly in your bag, ensuring productivity on the move.",
+    category: "diaries",
+    imageUrl: ImageLinks.deepDarkBlue,
+    description: "The Rich Deep Dark Blue Diary combines timeless style with practicality. This diary offers a stunning dark blue cover with ample space for organizing your thoughts, making it perfect for those who cherish both beauty and functionality in their stationery."
   },
   {
-    sku: "dpl004",
-    name: "Personalized Custom Planner",
+    sku: "ppn-30",
+    name: "Serene Deep Sky Blue Diary",
     price: 599,
-    category: "diaries or planner",
-    imageUrl: ImageLinks.cafe,
-    description: "Design your own planner with the Personalized Custom Planner. Tailor it with your favorite colors, layouts, or designs to suit your unique style and organizational needs.",
+    category: "diaries",
+    imageUrl: ImageLinks.deepSkyBlue,
+    description: "Inspired by the clear, expansive sky, the Serene Deep Sky Blue Diary brings a sense of calm and tranquility to your daily routine. Perfect for jotting down ideas, to-dos, and inspirations while adding a peaceful touch to your desk."
   },
-
+  {
+    sku: "ppn-16",
+    name: "Vivid Dual Orange Diary",
+    price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.deepOrange,
+    description: "Add energy to your desk with the Vivid Dual Orange Diary. Featuring a bold dual-tone design, this diary is perfect for those who seek a balance of fun and functionality. Let the vibrant color fuel your creativity and elevate your daily writing experience."
+  },
+  {
+    sku: "ppn-31",
+    name: "Sophisticated Elegant Gray Diary",
+    price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.elegantGray,
+    description: "Subtle yet striking, the Sophisticated Elegant Gray Diary is the ideal companion for the discerning individual. Its sleek and versatile gray cover makes it perfect for any occasion, offering a premium writing experience with every page you turn."
+  },
+  {
+    sku: "ppn-15",
+    name: "Trendy Fabricated Sky Blue Diary",
+    price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.fabricatedSkyBlue,
+    description: "The Trendy Fabricated Sky Blue Diary blends soft texture with refreshing color. Its sky-blue cover and high-quality binding make it a stylish and functional addition to any desk. Perfect for those who appreciate an artistic yet organized way of journaling."
+  },
+  {
+    sku: "ppn-20",
+    name: "Classic Faded Brown Diary",
+    price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.fadedBrown,
+    description: "The Classic Faded Brown Diary is a timeless piece that adds warmth to your writing space. Its earthy tones and rugged texture make it the perfect choice for creatives, travelers, and those who appreciate a natural, vintage look."
+  },
+  {
+    sku: "ppn-01",
+    name: "Minimalist Gray Diary",
+    price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.grayDiary,
+    description: "Simple, sleek, and elegant—the Minimalist Gray Diary is designed for those who appreciate the beauty of simplicity. Its soft gray cover is perfect for both professional and personal use, providing a clean slate for your ideas, plans, and reflections."
+  },
+  {
+    sku: "ppn-14",
+    name: "Warm Light Brown Diary",
+    price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.lightBrown,
+    description: "Embrace natural warmth with the Light Brown Diary. Its soft, inviting color and smooth texture make it a comforting and practical companion. Ideal for those who enjoy writing with a personal touch and appreciate a rustic, yet polished look."
+  },
+  {
+    sku: "ppn-23",
+    name: "Charming Light Royal Gray Diary",
+    price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.lightRoyalGreen,
+    description: "The Charming Light Royal Gray Diary is a sophisticated and graceful addition to any desk. Its light gray tone exudes professionalism and elegance, while its durable construction ensures that your thoughts, ideas, and goals stay protected in style."
+  },
+  {
+    sku: "ppn-10",
+    name: "Soothing Light Sky Blue Diary",
+    price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.lightSkyBlue,
+    description: "Bring a touch of calm and serenity to your desk with the Soothing Light Sky Blue Diary. Perfect for those who need a peaceful space to organize their thoughts, it’s both a stylish and functional tool for journaling, planning, and creating."
+  },
+  {
+    sku: "ppn-08",
+    name: "Elegant Lined Dark Blue Diary",
+    price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.linedDarkBlue,
+    description: "The Elegant Lined Dark Blue Diary adds sophistication to your everyday writing experience. With its premium lined pages and sleek dark blue cover, it's perfect for capturing your ideas in style, whether you're at work, at home, or on the go."
+  },
+  {
+      sku: "ppn-29",
+      name: "Stylish Lined Light Blue Diary",
+      price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.linedLightBlue,
+    description: "Infuse your writing with fresh energy using the Stylish Lined Light Blue Diary. This diary combines the tranquil hue of light blue with premium lined pages, making it perfect for those who appreciate a clean and organized way to capture their thoughts."
+  },
+  {
+      sku: "ppn-11",
+      name: "Rich Maroon Diary",
+      price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.maroon,
+    description: "Make a bold statement with the Rich Maroon Diary. Its deep red color evokes strength and sophistication, while its luxurious feel makes it a must-have for professionals, creatives, and anyone who wants to keep their ideas organized in style."
+  },
+  {
+      sku: "ppn-03",
+      name: "Vibrant Orange Diary",
+      price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.orange,
+    description: "Add a burst of energy to your day with the Vibrant Orange Diary. Its lively orange cover is perfect for those who want to stay motivated and inspired, while its high-quality pages provide the perfect canvas for your creative thoughts."
+  },
+  {
+      sku: "ppn-22",
+      name: "Royal Blue Executive Diary",
+      price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.royalBlue,
+    description: "The Royal Blue Executive Diary is the perfect balance of professionalism and personality. Its bold blue color and premium finish make it an ideal companion for executives, entrepreneurs, and anyone who wants to take their organization to the next level."
+  },
+  {
+      sku: "ppn-24",
+      name: "Regal Royal Dark Gray Diary",
+      price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.royalDarkGray,
+    description: "The Regal Royal Dark Gray Diary combines refined style with exceptional quality. Perfect for those who want to add a touch of luxury to their work, this diary offers ample space to jot down ideas, set goals, and track progress in a sophisticated manner."
+  },
+  {
+      sku: "ppn-12",
+      name: "Chic Shaded Diary",
+      price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.shaded,
+    description: "Embrace a modern aesthetic with the Chic Shaded Diary. Its unique shaded design and durable cover make it a standout accessory for creatives and professionals alike, offering the perfect space to document your thoughts and achievements."
+  },
+  {
+      sku: "ppn-02",
+      name: "Calming Sky Blue Diary",
+      price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.skyBlue,
+    description: "Inspired by clear skies and peaceful moments, the Calming Sky Blue Diary is perfect for organizing your thoughts and goals. Its serene blue cover and smooth pages provide a soothing environment to help you focus and reflect."
+  },
+  {
+    sku: "ppn-25",
+    name: "Wooden Brown Diary",
+    price: 599,
+    category: "diaries",
+    imageUrl: ImageLinks.woodenBrown,
+    description: "Bring the charm of nature to your desk with the Wooden Brown Diary. Its rustic, wooden-inspired cover offers a unique aesthetic that’s perfect for creatives, writers, and those who appreciate the warm, earthy tones of nature."
+  }  
   // Other categories (packing boxes, bottles or sippers, pens, key chains, trophies, travel bags) can follow the same structure.
 ];
 
