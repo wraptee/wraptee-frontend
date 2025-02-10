@@ -13,7 +13,7 @@ const HomePage = () => {
     { name: "Coaster", image: ImageLinks.coaster },
     { name: "Sipper", image: ImageLinks.sippers },
     { name: "Pen", image: ImageLinks.pen },
-    { name: "Caps", image: ImageLinks.caps },
+    { name: "Gift", image: ImageLinks.gift1 },
     { name: "Bags", image: ImageLinks.redBag },
     { name: "Diaries", image: ImageLinks.diary },
   ];

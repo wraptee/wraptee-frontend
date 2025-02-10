@@ -336,9 +336,262 @@ const productData = [
     name: "Sky Blue Custom T-shirt for All Occasions",
     price: 399,
     category: "tshirt",
-    imageUrl: ImageLinks.skyBlue,
+    imageUrl: ImageLinks.skyBlueTshirt,
     description: "Elevate your look with the Customize Sky Blue T-shirt. Its calming blue shade and customization options allow you to showcase your creativity. Perfect for casual wear, team uniforms, or promotional events.",
-  },  
+  },
+  {
+    category: "tshirt",
+    description: "Express yourself with the achieve Your Life Stream T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.achieveYourLifeStream,
+    name: "achieve Your Life Stream Custom T-shirt",
+    price: 399,
+    sku: "tshirt0037"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Always Positive T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.AlwaysPositive,
+    name: "Always Positive Custom T-shirt",
+    price: 409,
+    sku: "tshirt0038"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Aum Om Ohm T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.AumOmOhm,
+    name: "Aum Om Ohm Custom T-shirt",
+    price: 419,
+    sku: "tshirt0039"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Baddest Witch Around T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.BaddestWitchAround,
+    name: "Baddest Witch Around Custom T-shirt",
+    price: 429,
+    sku: "tshirt0040"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Chokurei T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Chokurei,
+    name: "Chokurei Custom T-shirt",
+    price: 439,
+    sku: "tshirt0041"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Creativity Is Not Competition T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.CreativityIsNotCompetition,
+    name: "Creativity Is Not Competition Custom T-shirt",
+    price: 399,
+    sku: "tshirt0042"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Creativity Is Intelligence Having Fun T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.CreativityIsIntelligenceHavingFun,
+    name: "Creativity Is Intelligence Having Fun Custom T-shirt",
+    price: 409,
+    sku: "tshirt0043"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Daikomyo T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Daikomyo,
+    name: "Daikomyo Custom T-shirt",
+    price: 419,
+    sku: "tshirt008"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Daikomyo2 T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Daikomyo2,
+    name: "Daikomyo2 Custom T-shirt",
+    price: 429,
+    sku: "tshirt009"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Daikomyo3 T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Daikomyo3,
+    name: "Daikomyo3 Custom T-shirt",
+    price: 439,
+    sku: "tshirt010"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Do More Of What Makes You Happy T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.DoMoreOfWhatMakesYouHappy,
+    name: "Do More Of What Makes You Happy Custom T-shirt",
+    price: 399,
+    sku: "tshirt011"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Fire Serpent T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.FireSerpent,
+    name: "Fire Serpent Custom T-shirt",
+    price: 409,
+    sku: "tshirt012"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Gnosa T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Gnosa,
+    name: "Gnosa Custom T-shirt",
+    price: 419,
+    sku: "tshirt013"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Hand T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Hand,
+    name: "Hand Custom T-shirt",
+    price: 429,
+    sku: "tshirt014"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Hand2 T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Hand2,
+    name: "Hand2 Custom T-shirt",
+    price: 439,
+    sku: "tshirt015"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Harth T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Harth,
+    name: "Harth Custom T-shirt",
+    price: 399,
+    sku: "tshirt016"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Healing Energy Never Fades T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.HealingEnergyNeverFades,
+    name: "Healing Energy Never Fades Custom T-shirt",
+    price: 409,
+    sku: "tshirt017"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Hon Sha Ze Sho Nen T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.HonShaZeShoNen,
+    name: "Hon Sha Ze Sho Nen Custom T-shirt",
+    price: 419,
+    sku: "tshirt018"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Life Is Short And The World Is Wide T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.LifeIsShortAndTheWorldIsWide,
+    name: "Life Is Short And The World Is Wide Custom T-shirt",
+    price: 429,
+    sku: "tshirt019"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Meditation Is A Powerful Resource T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.MeditationIsAPowerfulResource,
+    name: "Meditation Is A Powerful Resource Custom T-shirt",
+    price: 439,
+    sku: "tshirt020"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Namaste T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Namaste,
+    name: "Namaste Custom T-shirt",
+    price: 399,
+    sku: "tshirt021"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Not All Heroes Wear T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.NotAllHeroesWear,
+    name: "Not All Heroes Wear Custom T-shirt",
+    price: 409,
+    sku: "tshirt022"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Palm Daikomyo T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.PalmDaikomyo,
+    name: "Palm Daikomyo Custom T-shirt",
+    price: 419,
+    sku: "tshirt023"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Palmistry T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Palmistry,
+    name: "Palmistry Custom T-shirt",
+    price: 429,
+    sku: "tshirt024"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Reiki T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Reiki,
+    name: "Reiki Custom T-shirt",
+    price: 439,
+    sku: "tshirt025"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Reiki Master T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.ReikiMaster,
+    name: "Reiki Master Custom T-shirt",
+    price: 399,
+    sku: "tshirt026"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Reiki Mode On T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.ReikiModeOn,
+    name: "Reiki Mode On Custom T-shirt",
+    price: 409,
+    sku: "tshirt027"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Sending You Healing Energy T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.SendingYouHealingEnergy,
+    name: "Sending You Healing Energy Custom T-shirt",
+    price: 419,
+    sku: "tshirt028"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Seven Chakras T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.SevenChakras,
+    name: "Seven Chakras Custom T-shirt",
+    price: 429,
+    sku: "tshirt029"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Shine Your Healing Light T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.ShineYourHealingLight,
+    name: "Shine Your Healing Light Custom T-shirt",
+    price: 439,
+    sku: "tshirt030"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Take Your Dreams Seriously T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.TakeYourDreamsSeriously,
+    name: "Take Your Dreams Seriously Custom T-shirt",
+    price: 399,
+    sku: "tshirt031"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the The Art Of Palmistry T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.TheArtOfPalmistry,
+    name: "The Art Of Palmistry Custom T-shirt",
+    price: 409,
+    sku: "tshirt032"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the The Best Way To Predict Future T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.TheBestWayToPredictFuture,
+    name: "The Best Way To Predict Future Custom T-shirt",
+    price: 419,
+    sku: "tshirt033"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Trust Your Crazy Ideas T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.TrustYourCrazyIdeas,
+    name: "Trust Your Crazy Ideas Custom T-shirt",
+    price: 429,
+    sku: "tshirt034"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Your Design Here T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.YourDesignHere,
+    name: "Your Design Here Custom T-shirt",
+    price: 439,
+    sku: "tshirt035"
+  }, {
+    category: "tshirt",
+    description: "Express yourself with the Zona T-shirt. Designed for comfort and style, it's perfect for casual wear, team events, or promotional branding. Made with high-quality fabric to keep you stylish and comfortable all day long.",
+    imageUrl: ImageLinks.Zona,
+    name: "Zona Custom T-shirt",
+    price: 399,
+    sku: "tshirt036"
+  }, 
 
   // Photo Frames
   {
@@ -640,7 +893,573 @@ const productData = [
     category: "bags",
     imageUrl: ImageLinks.windowJuteBag,
     description: "See the beauty of sustainability with the Classic Transparent Window Jute Bag. Stylish, sturdy, and perfect for showcasing your essentials while staying eco-friendly."
-    }
+  },
+  // Gifts
+
+  {
+    category: "gift",
+    description: "See the beauty of sustainability with the Classic Transparent Window Jute Bag. Stylish, sturdy, and perfect for showcasing your essentials while staying eco-friendly.",
+    imageUrl: ImageLinks.gift1,
+    name: "Premium Corporate Gift Set",
+    price: 599,
+    sku: "gift-01"
+  }, {
+    category: "gift",
+    description: "A premium collection of corporate gifts that leaves a lasting impression. Sleek, stylish, and designed for professionals.",
+    imageUrl: ImageLinks.gift2,
+    name: "Luxury Executive Collection",
+    price: 609,
+    sku: "gift-02"
+  }, {
+    category: "gift",
+    description: "Eco-friendly, stylish, and useful—this sustainable corporate gift set is perfect for modern professionals.",
+    imageUrl: ImageLinks.gift3,
+    name: "Eco-Friendly Corporate Essentials",
+    price: 619,
+    sku: "gift-03"
+  }, {
+    category: "gift",
+    description: "Make a statement with this luxurious business gift pack, carefully curated for elegance and functionality.",
+    imageUrl: ImageLinks.gift4,
+    name: "Elegant Business Gift Pack",
+    price: 629,
+    sku: "gift-04"
+  }, {
+    category: "gift",
+    description: "Designed for executives, this exclusive office gift set enhances productivity and style at work.",
+    imageUrl: ImageLinks.gift5,
+    name: "Exclusive Office Gift Hamper",
+    price: 639,
+    sku: "gift-05"
+  }, {
+    category: "gift",
+    description: "A sustainable choice for corporate gifting—eco-conscious products that align with modern work ethics.",
+    imageUrl: ImageLinks.gift6,
+    name: "Sustainable Gifting Solution",
+    price: 649,
+    sku: "gift-06"
+  }, {
+    category: "gift",
+    description: "Gift your team a work companion that combines functionality and style in one premium package.",
+    imageUrl: ImageLinks.gift7,
+    name: "Stylish Work Companion",
+    price: 659,
+    sku: "gift-07"
+  }, {
+    category: "gift",
+    description: "An elegant collection of office essentials that redefine sophistication for professionals.",
+    imageUrl: ImageLinks.gift8,
+    name: "Professional Gift Ensemble",
+    price: 669,
+    sku: "gift-08"
+  }, {
+    category: "gift",
+    description: "Classic, timeless, and perfect for professionals who appreciate organization and efficiency.",
+    imageUrl: ImageLinks.gift9,
+    name: "Classic Office Essentials",
+    price: 679,
+    sku: "gift-09"
+  }, {
+    category: "gift",
+    description: "High-end business accessories that add a touch of sophistication to any workspace.",
+    imageUrl: ImageLinks.gift10,
+    name: "High-End Business Accessories",
+    price: 689,
+    sku: "gift-10"
+  }, {
+    category: "gift",
+    description: "Boost productivity with this all-in-one gift kit designed for high achievers.",
+    imageUrl: ImageLinks.gift11,
+    name: "Ultimate Productivity Kit",
+    price: 699,
+    sku: "gift-11"
+  }, {
+    category: "gift",
+    description: "The perfect balance of functionality and modern aesthetics, ideal for any professional setting.",
+    imageUrl: ImageLinks.gift12,
+    name: "Modern Professional Package",
+    price: 709,
+    sku: "gift-12"
+  }, {
+    category: "gift",
+    description: "A luxury leather organizer set that enhances work efficiency while maintaining a sleek look.",
+    imageUrl: ImageLinks.gift13,
+    name: "Luxury Leather Organizer Set",
+    price: 719,
+    sku: "gift-13"
+  }, {
+    category: "gift",
+    description: "Designed for smart professionals, this office gear set ensures productivity with elegance.",
+    imageUrl: ImageLinks.gift14,
+    name: "Smart Office Gear",
+    price: 729,
+    sku: "gift-14"
+  }, {
+    category: "gift",
+    description: "Excellence in a box—this executive set is perfect for professionals who aim for success.",
+    imageUrl: ImageLinks.gift15,
+    name: "Executive Excellence Pack",
+    price: 739,
+    sku: "gift-15"
+  }, {
+    category: "gift",
+    description: "A corporate companion that promotes sustainability, style, and efficiency.",
+    imageUrl: ImageLinks.gift16,
+    name: "Green Corporate Companion",
+    price: 749,
+    sku: "gift-16"
+  }, {
+    category: "gift",
+    description: "Upgrade any workspace with these premium desk essentials tailored for modern professionals.",
+    imageUrl: ImageLinks.gift17,
+    name: "Premium Desk Essentials",
+    price: 759,
+    sku: "gift-17"
+  }, {
+    category: "gift",
+    description: "An exclusive selection of gifts curated for corporate success and sophistication.",
+    imageUrl: ImageLinks.gift18,
+    name: "Corporate Success Kit",
+    price: 769,
+    sku: "gift-18"
+  }, {
+    category: "gift",
+    description: "Sophisticated, stylish, and highly functional—ideal for corporate gifting.",
+    imageUrl: ImageLinks.gift19,
+    name: "Sophisticated Work Set",
+    price: 779,
+    sku: "gift-19"
+  }, {
+    category: "gift",
+    description: "A collection of work essentials designed to elevate productivity and workplace aesthetics.",
+    imageUrl: ImageLinks.gift20,
+    name: "Office Productivity Boost",
+    price: 789,
+    sku: "gift-20"
+  }, {
+    category: "gift",
+    description: "Eco-friendly, professional, and practical—this work hamper is a must-have for employees.",
+    imageUrl: ImageLinks.gift21,
+    name: "Eco-Conscious Work Hamper",
+    price: 799,
+    sku: "gift-21"
+  }, {
+    category: "gift",
+    description: "An elegant blend of business essentials that complement any workspace.",
+    imageUrl: ImageLinks.gift22,
+    name: "Elegant Business Essentials",
+    price: 809,
+    sku: "gift-22"
+  }, {
+    category: "gift",
+    description: "Smart accessories to optimize workflow and maintain a stylish office setup.",
+    imageUrl: ImageLinks.gift23,
+    name: "Smart Workstation Accessories",
+    price: 819,
+    sku: "gift-23"
+  }, {
+    category: "gift",
+    description: "A perfect blend of utility and luxury—this corporate gift pack speaks volumes.",
+    imageUrl: ImageLinks.gift24,
+    name: "Professional Power Pack",
+    price: 829,
+    sku: "gift-24"
+  }, {
+    category: "gift",
+    description: "Versatility at its best! A multi-purpose office gift set that suits professionals of all levels.",
+    imageUrl: ImageLinks.gift25,
+    name: "Versatile Office Gift Set",
+    price: 839,
+    sku: "gift-25"
+  }, {
+    category: "gift",
+    description: "Refined and practical—crafted for executives who value excellence in their workspace.",
+    imageUrl: ImageLinks.gift26,
+    name: "Refined Business Bundle",
+    price: 849,
+    sku: "gift-26"
+  }, {
+    category: "gift",
+    description: "An innovative hamper filled with professional tools to enhance daily work routines.",
+    imageUrl: ImageLinks.gift27,
+    name: "Innovative Corporate Hamper",
+    price: 859,
+    sku: "gift-27"
+  }, {
+    category: "gift",
+    description: "Minimalistic yet highly efficient—this executive set embodies modern corporate culture.",
+    imageUrl: ImageLinks.gift28,
+    name: "Minimalist Executive Set",
+    price: 869,
+    sku: "gift-28"
+  }, {
+    category: "gift",
+    description: "An elite collection of work essentials designed to impress clients and employees alike.",
+    imageUrl: ImageLinks.gift29,
+    name: "Elite Office Companion",
+    price: 879,
+    sku: "gift-29"
+  }, {
+    category: "gift",
+    description: "Signature corporate gifts that redefine elegance and efficiency.",
+    imageUrl: ImageLinks.gift30,
+    name: "Signature Corporate Kit",
+    price: 889,
+    sku: "gift-30"
+  }, {
+    category: "gift",
+    description: "Timeless and practical business essentials to complement any professional’s lifestyle.",
+    imageUrl: ImageLinks.gift31,
+    name: "Timeless Business Essentials",
+    price: 899,
+    sku: "gift-31"
+  }, {
+    category: "gift",
+    description: "A new-age corporate collection designed for professionals who thrive on innovation.",
+    imageUrl: ImageLinks.gift32,
+    name: "Next-Gen Office Collection",
+    price: 909,
+    sku: "gift-32"
+  }, {
+    category: "gift",
+    description: "Work essentials that prioritize sustainability without compromising on sophistication.",
+    imageUrl: ImageLinks.gift33,
+    name: "Sustainable Work Essentials",
+    price: 919,
+    sku: "gift-33"
+  }, {
+    category: "gift",
+    description: "A chic and professional ensemble designed to enhance productivity with style.",
+    imageUrl: ImageLinks.gift34,
+    name: "Chic Professional Ensemble",
+    price: 929,
+    sku: "gift-34"
+  }, {
+    category: "gift",
+    description: "Classic, durable, and a must-have for every professional's daily routine.",
+    imageUrl: ImageLinks.gift35,
+    name: "Classic Executive Set",
+    price: 939,
+    sku: "gift-35"
+  }, {
+    category: "gift",
+    description: "An all-in-one organizer set crafted for modern business executives.",
+    imageUrl: ImageLinks.gift36,
+    name: "Smart Business Organizer",
+    price: 949,
+    sku: "gift-36"
+  }, {
+    category: "gift",
+    description: "Designed for professionals who prefer sustainable, high-quality work accessories.",
+    imageUrl: ImageLinks.gift37,
+    name: "Eco-Smart Office Kit",
+    price: 959,
+    sku: "gift-37"
+  }, {
+    category: "gift",
+    description: "Luxury essentials for an upgraded work experience—stylish, durable, and efficient.",
+    imageUrl: ImageLinks.gift38,
+    name: "Luxury Workstation Must-Haves",
+    price: 969,
+    sku: "gift-38"
+  }, {
+    category: "gift",
+    description: "A charming corporate gift set with a unique blend of utility and elegance.",
+    imageUrl: ImageLinks.gift39,
+    name: "Corporate Charm Gift Set",
+    price: 979,
+    sku: "gift-39"
+  }, {
+    category: "gift",
+    description: "A deluxe selection of office essentials crafted to enhance productivity and organization.",
+    imageUrl: ImageLinks.gift40,
+    name: "Office Deluxe Essentials",
+    price: 989,
+    sku: "gift-40"
+  }, {
+    category: "gift",
+    description: "Empower professionals with this power-packed productivity kit, designed for efficiency.",
+    imageUrl: ImageLinks.gift41,
+    name: "Productivity Power Pack",
+    price: 999,
+    sku: "gift-41"
+  }, {
+    category: "gift",
+    description: "Everything a professional needs to stay on top of their work—sleek, stylish, and practical.",
+    imageUrl: ImageLinks.gift42,
+    name: "Essential Business Tools",
+    price: 1009,
+    sku: "gift-42"
+  }, {
+    category: "gift",
+    description: "A comprehensive corporate set tailored to enhance work-life balance and efficiency.",
+    imageUrl: ImageLinks.gift43,
+    name: "Complete Corporate Set",
+    price: 1019,
+    sku: "gift-43"
+  }, {
+    category: "gift",
+    description: "Business-class gifts that redefine elegance in the corporate world.",
+    imageUrl: ImageLinks.gift44,
+    name: "Business Class Gift Hamper",
+    price: 1029,
+    sku: "gift-44"
+  }, {
+    category: "gift",
+    description: "A premium work essentials set that exudes professionalism and style.",
+    imageUrl: ImageLinks.gift45,
+    name: "Elite Work Essentials",
+    price: 1039,
+    sku: "gift-45"
+  },
+  // Pens
+  {
+    category: "pen",
+    description: "Classic, durable, and a must-have for every professional's daily routine.",
+    imageUrl: ImageLinks.pen1,
+    name: "Classic Executive Set",
+    price: 90,
+    sku: "pen-01"
+  }, {
+    category: "pen",
+    description: "A luxury metal pen designed for executives who value sophistication and smooth writing.",
+    imageUrl: ImageLinks.pen2,
+    name: "Luxury Metal Pen",
+    price: 95,
+    sku: "pen-02"
+  }, {
+    category: "pen",
+    description: "Premium business pen with a sleek design and long-lasting ink for effortless writing.",
+    imageUrl: ImageLinks.pen3,
+    name: "Premium Business Pen",
+    price: 100,
+    sku: "pen-03"
+  }, {
+    category: "pen",
+    description: "A sleek and stylish corporate pen that adds a touch of professionalism to your desk.",
+    imageUrl: ImageLinks.pen4,
+    name: "Sleek Corporate Pen",
+    price: 105,
+    sku: "pen-04"
+  }, {
+    category: "pen",
+    description: "A signature writing tool crafted for those who appreciate fine craftsmanship and smooth flow.",
+    imageUrl: ImageLinks.pen5,
+    name: "Signature Writing Tool",
+    price: 110,
+    sku: "pen-05"
+  }, {
+    category: "pen",
+    description: "Elegant, durable, and designed for professionals who prefer a seamless writing experience.",
+    imageUrl: ImageLinks.pen6,
+    name: "Elegant Office Pen",
+    price: 115,
+    sku: "pen-06"
+  }, {
+    category: "pen",
+    description: "A high-end fountain pen with superior ink flow, making every signature stand out.",
+    imageUrl: ImageLinks.pen7,
+    name: "Professional Fountain Pen",
+    price: 120,
+    sku: "pen-07"
+  }, {
+    category: "pen",
+    description: "Experience precision with this smooth ink rollerball, crafted for business professionals.",
+    imageUrl: ImageLinks.pen8,
+    name: "Smooth Ink Rollerball",
+    price: 125,
+    sku: "pen-08"
+  }, {
+    category: "pen",
+    description: "A timeless corporate pen that combines style and functionality effortlessly.",
+    imageUrl: ImageLinks.pen9,
+    name: "Timeless Corporate Pen",
+    price: 130,
+    sku: "pen-09"
+  }, {
+    category: "pen",
+    description: "Designed for executives, this stylish pen offers superior comfort and smooth writing.",
+    imageUrl: ImageLinks.pen10,
+    name: "Stylish Work Companion",
+    price: 135,
+    sku: "pen-10"
+  }, {
+    category: "pen",
+    description: "Refined and sophisticated, this writing instrument ensures elegance in every stroke.",
+    imageUrl: ImageLinks.pen11,
+    name: "Refined Writing Instrument",
+    price: 140,
+    sku: "pen-11"
+  }, {
+    category: "pen",
+    description: "An executive excellence pen with a modern design and premium build quality.",
+    imageUrl: ImageLinks.pen12,
+    name: "Executive Excellence Pen",
+    price: 145,
+    sku: "pen-12"
+  }, {
+    category: "pen",
+    description: "Write with precision using this high-quality gel pen designed for comfort and durability.",
+    imageUrl: ImageLinks.pen13,
+    name: "High-Precision Gel Pen",
+    price: 150,
+    sku: "pen-13"
+  }, {
+    category: "pen",
+    description: "A smart office signature pen, perfect for professionals who demand quality and style.",
+    imageUrl: ImageLinks.pen14,
+    name: "Smart Office Signature Pen",
+    price: 155,
+    sku: "pen-14"
+  }, {
+    category: "pen",
+    description: "A luxurious gold-trim business pen that enhances your writing experience with elegance.",
+    imageUrl: ImageLinks.pen15,
+    name: "Gold Trim Business Pen",
+    price: 160,
+    sku: "pen-15"
+  }, {
+    category: "pen",
+    description: "Minimalist, lightweight, and sleek—this corporate pen is perfect for daily use.",
+    imageUrl: ImageLinks.pen16,
+    name: "Minimalist Corporate Pen",
+    price: 165,
+    sku: "pen-16"
+  }, {
+    category: "pen",
+    description: "Sophisticated matte finish with a premium ink refill, ensuring a flawless writing experience.",
+    imageUrl: ImageLinks.pen17,
+    name: "Sophisticated Matte Pen",
+    price: 170,
+    sku: "pen-17"
+  }, {
+    category: "pen",
+    description: "An ergonomic comfort pen designed for smooth and effortless handwriting.",
+    imageUrl: ImageLinks.pen18,
+    name: "Ergonomic Comfort Pen",
+    price: 175,
+    sku: "pen-18"
+  }, {
+    category: "pen",
+    description: "Ultra-smooth and long-lasting ink flow makes this signature pen a professional favorite.",
+    imageUrl: ImageLinks.pen19,
+    name: "Ultra-Smooth Signature Pen",
+    price: 180,
+    sku: "pen-19"
+  }, {
+    category: "pen",
+    description: "A modern executive ballpoint pen with a durable metal body and stylish finish.",
+    imageUrl: ImageLinks.pen20,
+    name: "Modern Executive Ballpoint",
+    price: 185,
+    sku: "pen-20"
+  }, {
+    category: "pen",
+    description: "The classic black metal pen—a timeless choice for professionals and executives.",
+    imageUrl: ImageLinks.pen21,
+    name: "Classic Black Metal Pen",
+    price: 190,
+    sku: "pen-21"
+  }, {
+    category: "pen",
+    description: "A premium silver pen with a professional touch and smooth writing experience.",
+    imageUrl: ImageLinks.pen22,
+    name: "Premium Silver Pen",
+    price: 195,
+    sku: "pen-22"
+  }, {
+    category: "pen",
+    description: "Grip-friendly gel pen with precision ink technology for effortless writing.",
+    imageUrl: ImageLinks.pen23,
+    name: "Professional Grip Gel Pen",
+    price: 200,
+    sku: "pen-23"
+  }, {
+    category: "pen",
+    description: "A luxury gold-plated pen, making every signature bold and remarkable.",
+    imageUrl: ImageLinks.pen24,
+    name: "Luxury Gold Plated Pen",
+    price: 205,
+    sku: "pen-24"
+  }, {
+    category: "pen",
+    description: "Sleek chrome finish with a professional look—perfect for corporate gifting.",
+    imageUrl: ImageLinks.pen25,
+    name: "Sleek Chrome Finish Pen",
+    price: 210,
+    sku: "pen-25"
+  }, {
+    category: "pen",
+    description: "A timeless wooden pen that adds warmth and style to your writing experience.",
+    imageUrl: ImageLinks.pen26,
+    name: "Timeless Wooden Pen",
+    price: 215,
+    sku: "pen-26"
+  }, {
+    category: "pen",
+    description: "High-end business pen with a metallic grip and smooth ink flow.",
+    imageUrl: ImageLinks.pen27,
+    name: "High-End Business Pen",
+    price: 220,
+    sku: "pen-27"
+  }, {
+    category: "pen",
+    description: "Eco-friendly bamboo pen for professionals who appreciate sustainability and style.",
+    imageUrl: ImageLinks.pen28,
+    name: "Eco-Friendly Bamboo Pen",
+    price: 225,
+    sku: "pen-28"
+  }, {
+    category: "pen",
+    description: "An elegant leather-wrapped pen with a luxurious feel and durable ink cartridge.",
+    imageUrl: ImageLinks.pen29,
+    name: "Elegant Leather Wrapped Pen",
+    price: 230,
+    sku: "pen-29"
+  }, {
+    category: "pen",
+    description: "Diamond-tip signature pen designed for smooth, uninterrupted writing.",
+    imageUrl: ImageLinks.pen30,
+    name: "Diamond Tip Signature Pen",
+    price: 235,
+    sku: "pen-30"
+  }, {
+    category: "pen",
+    description: "A magnetic cap business pen with a sleek design and easy-to-use functionality.",
+    imageUrl: ImageLinks.pen31,
+    name: "Magnetic Cap Business Pen",
+    price: 240,
+    sku: "pen-31"
+  }, {
+    category: "pen",
+    description: "A luxury crystal pen with a unique grip and smooth ink distribution.",
+    imageUrl: ImageLinks.pen32,
+    name: "Luxury Crystal Pen",
+    price: 245,
+    sku: "pen-32"
+  }, {
+    category: "pen",
+    description: "Corporate branded pen—an ideal promotional gift with a premium touch.",
+    imageUrl: ImageLinks.pen33,
+    name: "Corporate Branded Pen",
+    price: 250,
+    sku: "pen-33"
+  }, {
+    category: "pen",
+    description: "Precision writing tool with a fine-tip for clean, detailed strokes.",
+    imageUrl: ImageLinks.pen34,
+    name: "Precision Writing Tool",
+    price: 255,
+    sku: "pen-34"
+  }, {
+    category: "pen",
+    description: "An exclusive executive pen that redefines sophistication and professionalism.",
+    imageUrl: ImageLinks.pen35,
+    name: "Exclusive Executive Pen",
+    price: 260,
+    sku: "pen-35"
+  }
+
 ]
 
 // Other categories (packing boxes, bottles or sippers, pens, key chains, trophies, travel bags) can follow the same structure.
