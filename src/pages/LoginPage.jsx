@@ -9,7 +9,6 @@ import {
   Paper,
   IconButton,
 } from "@mui/material";
-import PersonIcon from "@mui/icons-material/Person";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailIcon from "@mui/icons-material/Mail";
 import GoogleIcon from "@mui/icons-material/Google";
@@ -35,7 +34,6 @@ const LoginPage = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [phoneError, setPhoneError] = useState("");
   const [isPhoneNumberEntered, setIsPhoneNumberEntered] = useState(false);
-  const [isSubmitClicked, setIsSubmitClicked] = useState(false);
   const [error, setError] = useState("");
   const [openModal, setOpenModal] = useState(false);
   const navigate = useNavigate();
