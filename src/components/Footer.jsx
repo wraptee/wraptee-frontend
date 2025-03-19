@@ -153,7 +153,9 @@ const Footer = () => {
             <Typography variant="h6" gutterBottom>
               Contact Us
             </Typography>
-            <Typography variant="body2">Phone: +91 9811873015</Typography>
+            <Typography variant="body2">
+              Phone: +91 9811873015, 9205253927
+            </Typography>
             <Typography variant="body2">Email: wraptee3@gmail.com</Typography>
             <Typography variant="body2">
               B-98, Himgiri Apartment, Kalkaji <br></br> Extension, New Delhi
