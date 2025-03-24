@@ -57,7 +57,6 @@ const Carousel = () => {
   return (
     <Box className="carousel-container">
       <Typography
-        className="carousel-title"
         variant="h4"
         gutterBottom
         color="optional"
@@ -75,13 +74,12 @@ const Carousel = () => {
             onClick={() => navigate(`/product/${slide.sku}`)}
           >
             <Box className="carousel-slide">
-              <Box className="carousel-image-container">
                 <img
                   src={slide.imageUrl}
                   alt={slide.name}
                   className="carousel-image"
                 />
-              </Box>
+             
               <Typography
                 variant="h6"
                 className="carousel-item-title"

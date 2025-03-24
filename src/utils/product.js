@@ -596,7 +596,7 @@ const productData = [
   // Photo Frames
   {
     sku: "dpl001",
-    name: "Elegant Leather Planner",
+    name: "Elegant Leather Planner Diary",
     price: 599,
     category: "diaries or planner",
     imageUrl: ImageLinks.cafe,
@@ -900,7 +900,7 @@ const productData = [
     category: "gift",
     description: "See the beauty of sustainability with the Classic Transparent Window Jute Bag. Stylish, sturdy, and perfect for showcasing your essentials while staying eco-friendly.",
     imageUrl: ImageLinks.gift1,
-    name: "Premium Corporate Gift Set",
+    name: "Premium Corporate Gift",
     price: 599,
     sku: "gift-01"
   }, {
