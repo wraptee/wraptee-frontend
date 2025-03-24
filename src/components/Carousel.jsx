@@ -41,6 +41,7 @@ const Carousel = () => {
         breakpoint: 768, // Smaller screens (mobile)
         settings: {
           slidesToShow: 1, // Show 1 slide at a time on small screens
+          centerMode: false
         },
       },
     ],
