@@ -50,7 +50,7 @@
 }
 
 .category-image {
-  width: 100%; /* Ensure the width fully spans the card */
+  width: 100%; 
   height: 100%; /* Ensure the height fully spans the card */
   object-fit: contain; /* Ensures the full image is visible */
   padding: 5px; /* Optional: Add slight padding for better spacing */
